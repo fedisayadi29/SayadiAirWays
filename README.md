@@ -1,1 +1,3 @@
 # SayadiAirWays
+SayadiAirWays est une application web moderne dédiée à la gestion et à la réservation de vols aériens. Développée en HTML avec une architecture web standard, cette plateforme offre une interface intuitive permettant aux utilisateurs de parcourir les destinations aériennes disponibles, comparer les tarifs et effectuer leurs réservations de manière simple et efficace. Le projet est conçu pour être accessible, performant et facile à utiliser, que vous soyez un voyageur occasionnel ou un client fréquent des services aériens. Avec un focus sur l'expérience utilisateur, SayadiAirWays vise à transformer la manière dont les gens réservent leurs vols en ligne.
+
