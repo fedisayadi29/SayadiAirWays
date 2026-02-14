@@ -1,0 +1,1718 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css?v=1.2" />
+    <title>SayadiAirways - Book Flight</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="Home.html">
+          <span class="nav__brand ms-2">SayadiAirways</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="text-white"><i class="ri-menu-3-line"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Home.html"><i class="ri-home-line"></i> Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white active" aria-current="page" href="Book-Complete.html"><i class="ri-plane-line"></i> Book</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Explore.html"><i class="ri-map-pin-line"></i> Explore</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Experience.html"><i class="ri-gift-line"></i> Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Contact.html"><i class="ri-phone-line"></i> Contact</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="ri-briefcase-line"></i> Manage
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Manage-New.html"><i class="ri-search-line"></i> Find Booking</a></li>
+                <li><a class="dropdown-item" href="ModifyBooking-Complete.html"><i class="ri-edit-box-line"></i> Modify Booking</a></li>
+                <li><a class="dropdown-item" href="CancelBooking-Complete.html"><i class="ri-close-circle-line"></i> Cancel Booking</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="CheckIn-Complete.html"><i class="ri-calendar-check-line"></i> Check-In</a></li>
+                <li><a class="dropdown-item" href="FlightStatus.html"><i class="ri-flight-takeoff-line"></i> Flight Status</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="ri-add-circle-line"></i> Extras
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Extras.html"><i class="ri-service-line"></i> All Extras</a></li>
+                <li><a class="dropdown-item" href="ExtraBaggage.html"><i class="ri-luggage-cart-line"></i> Extra Baggage</a></li>
+                <li><a class="dropdown-item" href="CarRental-Complete.html"><i class="ri-car-line"></i> Car Rental</a></li>
+                <li><a class="dropdown-item" href="HotelBooking-Complete.html"><i class="ri-hotel-line"></i> Hotel</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="TravelInsurance-Complete.html"><i class="ri-shield-line"></i> Travel Insurance</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Login.html"><i class="ri-user-line"></i> Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Booking Process -->
+    <section class="booking-process">
+      <div class="container">
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="step-number active">1</div>
+            <div class="step-title">Search & Select</div>
+            <div class="step-description">Find & choose flights</div>
+          </div>
+          <div class="step-connector"></div>
+          <div class="process-step">
+            <div class="step-number">2</div>
+            <div class="step-title">Seat Selection</div>
+            <div class="step-description">Choose your seat</div>
+          </div>
+          <div class="step-connector"></div>
+          <div class="process-step">
+            <div class="step-number">3</div>
+            <div class="step-title">Extras</div>
+            <div class="step-description">Add services</div>
+          </div>
+          <div class="step-connector"></div>
+          <div class="process-step">
+            <div class="step-number">4</div>
+            <div class="step-title">Details</div>
+            <div class="step-description">Passenger info</div>
+          </div>
+          <div class="step-connector"></div>
+          <div class="process-step">
+            <div class="step-number">5</div>
+            <div class="step-title">Payment</div>
+            <div class="step-description">Secure checkout</div>
+          </div>
+        </div>
+
+        <!-- Step 1: Flight Search & Selection -->
+        <div class="step-content active" id="step1">
+          <div class="row">
+            <div class="col-lg-10 mx-auto">
+              <div class="booking__container">
+                <h2 class="text-center mb-4">Search & Select Flights</h2>
+                
+                <!-- Search Form -->
+                <form id="flightSearchForm" class="mb-5">
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <div class="input__group">
+                        <i class="ri-flight-takeoff-line input__icon"></i>
+                        <select class="form-control" name="from" required>
+                          <option value="">From</option>
+                          <option value="TUN">Tunis, Tunisia (TUN)</option>
+                          <option value="SFA">Sfax, Tunisia (SFA)</option>
+                          <option value="MIR">Monastir, Tunisia (MIR)</option>
+                          <option value="TOE">Tozeur, Tunisia (TOE)</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="input__group">
+                        <i class="ri-flight-land-line input__icon"></i>
+                        <select class="form-control" name="to" required>
+                          <option value="">To</option>
+                          <!-- Europe -->
+                          <option value="CDG">Paris, France (CDG)</option>
+                          <option value="LHR">London, UK (LHR)</option>
+                          <option value="FCO">Rome, Italy (FCO)</option>
+                          <option value="MAD">Madrid, Spain (MAD)</option>
+                          <option value="BCN">Barcelona, Spain (BCN)</option>
+                          <option value="MXP">Milan, Italy (MXP)</option>
+                          <option value="VIE">Vienna, Austria (VIE)</option>
+                          <option value="ZUR">Zurich, Switzerland (ZUR)</option>
+                          <option value="AMS">Amsterdam, Netherlands (AMS)</option>
+                          <option value="BRU">Brussels, Belgium (BRU)</option>
+                          <option value="CPH">Copenhagen, Denmark (CPH)</option>
+                          <option value="ARN">Stockholm, Sweden (ARN)</option>
+                          <option value="OSL">Oslo, Norway (OSL)</option>
+                          <option value="HEL">Helsinki, Finland (HEL)</option>
+                          <option value="WAW">Warsaw, Poland (WAW)</option>
+                          <option value="PRG">Prague, Czech Republic (PRG)</option>
+                          <option value="BUD">Budapest, Hungary (BUD)</option>
+                          <option value="OTP">Bucharest, Romania (OTP)</option>
+                          <option value="SOF">Sofia, Bulgaria (SOF)</option>
+                          <option value="ATH">Athens, Greece (ATH)</option>
+                          <option value="JTR">Santorini, Greece (JTR)</option>
+                          <option value="LIS">Lisbon, Portugal (LIS)</option>
+                          <option value="DUB">Dublin, Ireland (DUB)</option>
+                          <option value="LUX">Luxembourg (LUX)</option>
+                          <!-- Middle East -->
+                          <option value="IST">Istanbul, Turkey (IST)</option>
+                          <option value="DXB">Dubai, UAE (DXB)</option>
+                          <option value="AUH">Abu Dhabi, UAE (AUH)</option>
+                          <option value="DOH">Doha, Qatar (DOH)</option>
+                          <option value="KWI">Kuwait City, Kuwait (KWI)</option>
+                          <option value="BAH">Manama, Bahrain (BAH)</option>
+                          <option value="MCT">Muscat, Oman (MCT)</option>
+                          <option value="RUH">Riyadh, Saudi Arabia (RUH)</option>
+                          <option value="JED">Jeddah, Saudi Arabia (JED)</option>
+                          <option value="AMM">Amman, Jordan (AMM)</option>
+                          <option value="BEY">Beirut, Lebanon (BEY)</option>
+                          <option value="TLV">Tel Aviv, Israel (TLV)</option>
+                          <option value="THR">Tehran, Iran (THR)</option>
+                          <!-- Asia -->
+                          <option value="KUL">Kuala Lumpur, Malaysia (KUL)</option>
+                          <option value="CGK">Jakarta, Indonesia (CGK)</option>
+                          <option value="SIN">Singapore (SIN)</option>
+                          <option value="BKK">Bangkok, Thailand (BKK)</option>
+                          <option value="MNL">Manila, Philippines (MNL)</option>
+                          <option value="HKG">Hong Kong (HKG)</option>
+                          <option value="TPE">Taipei, Taiwan (TPE)</option>
+                          <option value="ICN">Seoul, South Korea (ICN)</option>
+                          <option value="NRT">Tokyo, Japan (NRT)</option>
+                          <option value="PEK">Beijing, China (PEK)</option>
+                          <option value="PVG">Shanghai, China (PVG)</option>
+                          <!-- Indian Subcontinent -->
+                          <option value="BOM">Mumbai, India (BOM)</option>
+                          <option value="DEL">New Delhi, India (DEL)</option>
+                          <option value="BLR">Bangalore, India (BLR)</option>
+                          <option value="MAA">Chennai, India (MAA)</option>
+                          <option value="HYD">Hyderabad, India (HYD)</option>
+                          <option value="CCU">Kolkata, India (CCU)</option>
+                          <option value="COK">Kochi, India (COK)</option>
+                          <option value="CMB">Colombo, Sri Lanka (CMB)</option>
+                          <option value="DAC">Dhaka, Bangladesh (DAC)</option>
+                          <option value="KTM">Kathmandu, Nepal (KTM)</option>
+                          <option value="ISB">Islamabad, Pakistan (ISB)</option>
+                          <option value="KHI">Karachi, Pakistan (KHI)</option>
+                          <option value="LHE">Lahore, Pakistan (LHE)</option>
+                          <!-- Africa -->
+                          <option value="CAI">Cairo, Egypt (CAI)</option>
+                          <option value="CMN">Casablanca, Morocco (CMN)</option>
+                          <option value="ALG">Algiers, Algeria (ALG)</option>
+                          <option value="TIP">Tripoli, Libya (TIP)</option>
+                          <option value="ADD">Addis Ababa, Ethiopia (ADD)</option>
+                          <option value="NBO">Nairobi, Kenya (NBO)</option>
+                          <option value="CPT">Cape Town, South Africa (CPT)</option>
+                          <option value="JNB">Johannesburg, South Africa (JNB)</option>
+                          <option value="LAD">Luanda, Angola (LAD)</option>
+                          <option value="ACC">Accra, Ghana (ACC)</option>
+                          <option value="LOS">Lagos, Nigeria (LOS)</option>
+                          <option value="DKR">Dakar, Senegal (DKR)</option>
+                          <!-- Indian Ocean -->
+                          <option value="SEZ">Seychelles (SEZ)</option>
+                          <option value="MRU">Mauritius (MRU)</option>
+                          <!-- Oceania -->
+                          <option value="SYD">Sydney, Australia (SYD)</option>
+                          <!-- Americas -->
+                          <option value="JFK">New York, USA (JFK)</option>
+                          <option value="GIG">Rio de Janeiro, Brazil (GIG)</option>
+                          <!-- Russia & Central Asia -->
+                          <option value="SVO">Moscow, Russia (SVO)</option>
+                          <option value="LED">St. Petersburg, Russia (LED)</option>
+                          <option value="TAS">Tashkent, Uzbekistan (TAS)</option>
+                          <option value="ALA">Almaty, Kazakhstan (ALA)</option>
+                          <option value="TBS">Tbilisi, Georgia (TBS)</option>
+                          <option value="EVN">Yerevan, Armenia (EVN)</option>
+                          <option value="BAK">Baku, Azerbaijan (BAK)</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="input__group">
+                        <i class="ri-calendar-line input__icon"></i>
+                        <input type="date" class="form-control" name="departure" required />
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="input__group">
+                        <i class="ri-user-line input__icon"></i>
+                        <select class="form-control" name="passengers">
+                          <option value="1">1 Adult</option>
+                          <option value="2">2 Adults</option>
+                          <option value="3">3 Adults</option>
+                          <option value="4">4 Adults</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <button type="button" class="btn btn-primary w-100" onclick="searchFlights()">
+                        <i class="ri-search-line"></i> Search Flights
+                      </button>
+                    </div>
+                  </div>
+                </form>
+
+                <!-- Flight Results -->
+                <div id="flightResults" class="flight-results" style="display: none;">
+                  <h3 class="mb-4">Available Flights</h3>
+                  
+                  <!-- Outbound Flights -->
+                  <div class="flight-section">
+                    <h4 class="section-title">
+                      <i class="ri-flight-takeoff-line"></i>
+                      Outbound Flights - <span id="outboundRoute">TUN → CDG</span>
+                    </h4>
+                    
+                    <div class="flights-list">
+                      <!-- Morning Flight -->
+                      <div class="flight-card" onclick="selectFlight(this, 'outbound')">
+                        <div class="flight-header">
+                          <div class="flight-time">
+                            <div class="departure">
+                              <div class="time">06:30</div>
+                              <div class="airport">TUN</div>
+                            </div>
+                            <div class="flight-duration">
+                              <div class="duration-line">
+                                <div class="plane-icon">✈</div>
+                              </div>
+                              <div class="duration-text">2h 45m</div>
+                              <div class="stops">Direct</div>
+                            </div>
+                            <div class="arrival">
+                              <div class="time">09:15</div>
+                              <div class="airport">CDG</div>
+                            </div>
+                          </div>
+                          <div class="flight-info">
+                            <div class="airline">SayadiAirways SA101</div>
+                            <div class="aircraft">Boeing 737-800</div>
+                          </div>
+                          <div class="flight-classes">
+                            <div class="class-option" data-class="economy">
+                              <div class="class-name">Economy</div>
+                              <div class="class-price">450 DT</div>
+                              <div class="class-seats">12 seats left</div>
+                            </div>
+                            <div class="class-option" data-class="business">
+                              <div class="class-name">Business</div>
+                              <div class="class-price">890 DT</div>
+                              <div class="class-seats">8 seats left</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Afternoon Flight -->
+                      <div class="flight-card" onclick="selectFlight(this, 'outbound')">
+                        <div class="flight-header">
+                          <div class="flight-time">
+                            <div class="departure">
+                              <div class="time">14:20</div>
+                              <div class="airport">TUN</div>
+                            </div>
+                            <div class="flight-duration">
+                              <div class="duration-line">
+                                <div class="plane-icon">✈</div>
+                              </div>
+                              <div class="duration-text">2h 50m</div>
+                              <div class="stops">Direct</div>
+                            </div>
+                            <div class="arrival">
+                              <div class="time">17:10</div>
+                              <div class="airport">CDG</div>
+                            </div>
+                          </div>
+                          <div class="flight-info">
+                            <div class="airline">SayadiAirways SA203</div>
+                            <div class="aircraft">Airbus A320</div>
+                          </div>
+                          <div class="flight-classes">
+                            <div class="class-option" data-class="economy">
+                              <div class="class-name">Economy</div>
+                              <div class="class-price">475 DT</div>
+                              <div class="class-seats">18 seats left</div>
+                            </div>
+                            <div class="class-option" data-class="business">
+                              <div class="class-name">Business</div>
+                              <div class="class-price">920 DT</div>
+                              <div class="class-seats">6 seats left</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Evening Flight -->
+                      <div class="flight-card" onclick="selectFlight(this, 'outbound')">
+                        <div class="flight-header">
+                          <div class="flight-time">
+                            <div class="departure">
+                              <div class="time">20:45</div>
+                              <div class="airport">TUN</div>
+                            </div>
+                            <div class="flight-duration">
+                              <div class="duration-line">
+                                <div class="plane-icon">✈</div>
+                              </div>
+                              <div class="duration-text">2h 40m</div>
+                              <div class="stops">Direct</div>
+                            </div>
+                            <div class="arrival">
+                              <div class="time">23:25</div>
+                              <div class="airport">CDG</div>
+                            </div>
+                          </div>
+                          <div class="flight-info">
+                            <div class="airline">SayadiAirways SA305</div>
+                            <div class="aircraft">Boeing 737-800</div>
+                          </div>
+                          <div class="flight-classes">
+                            <div class="class-option" data-class="economy">
+                              <div class="class-name">Economy</div>
+                              <div class="class-price">425 DT</div>
+                              <div class="class-seats">22 seats left</div>
+                            </div>
+                            <div class="class-option" data-class="business">
+                              <div class="class-name">Business</div>
+                              <div class="class-price">850 DT</div>
+                              <div class="class-seats">10 seats left</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="text-center mt-4">
+                    <button type="button" class="btn btn-primary btn-lg" onclick="nextStep(2)" id="continueToSeatBtn" disabled>
+                      Continue to Seat Selection <i class="ri-arrow-right-line"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2: Seat Selection -->
+        <div class="step-content" id="step2">
+          <div class="row">
+            <div class="col-lg-10 mx-auto">
+              <h2 class="text-center mb-4">Select Your Seat</h2>
+              
+              <div class="seat-selection-container">
+                <div class="row">
+                  <div class="col-lg-8">
+                    <div class="aircraft-layout">
+                      <div class="aircraft-header">
+                        <h4>Boeing 737-800 - Economy Class</h4>
+                        <div class="seat-legend">
+                          <div class="legend-item">
+                            <div class="seat-demo available"></div>
+                            <span>Available</span>
+                          </div>
+                          <div class="legend-item">
+                            <div class="seat-demo occupied"></div>
+                            <span>Occupied</span>
+                          </div>
+                          <div class="legend-item">
+                            <div class="seat-demo selected"></div>
+                            <span>Selected</span>
+                          </div>
+                          <div class="legend-item">
+                            <div class="seat-demo premium"></div>
+                            <span>Premium (+25 DT)</span>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="aircraft-body">
+                        <div class="seat-map" id="seatMap">
+                          <!-- Rows will be generated by JavaScript -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-lg-4">
+                    <div class="seat-info-panel">
+                      <h5>Seat Selection</h5>
+                      <div id="selectedSeatInfo">
+                        <p class="text-muted">Please select a seat from the aircraft layout</p>
+                      </div>
+                      
+                      <div class="seat-pricing mt-4">
+                        <h6>Seat Pricing</h6>
+                        <div class="pricing-item">
+                          <span>Standard Seat</span>
+                          <span class="price">Included</span>
+                        </div>
+                        <div class="pricing-item">
+                          <span>Premium Seat</span>
+                          <span class="price">+25 DT</span>
+                        </div>
+                        <div class="pricing-item">
+                          <span>Exit Row</span>
+                          <span class="price">+35 DT</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="text-center mt-4">
+                <button type="button" class="btn btn-secondary me-3" onclick="prevStep(1)">
+                  <i class="ri-arrow-left-line"></i> Back to Flights
+                </button>
+                <button type="button" class="btn btn-primary" onclick="nextStep(3)" id="continueToExtrasBtn">
+                  Continue to Extras <i class="ri-arrow-right-line"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Step 3: Select Extras -->
+        <div class="step-content" id="step3">
+          <div class="row">
+            <div class="col-lg-10 mx-auto">
+              <h2 class="text-center mb-4">Enhance Your Journey</h2>
+              <p class="text-center text-muted mb-5">Add extra services to make your flight more comfortable and convenient</p>
+              
+              <div class="extras-container">
+                <!-- Baggage Section -->
+                <div class="extras-category">
+                  <h4 class="category-title">
+                    <i class="ri-luggage-cart-line"></i>
+                    Baggage Options
+                  </h4>
+                  <div class="extras-grid">
+                    <div class="extra-item-detailed">
+                      <div class="extra-header">
+                        <div class="extra-icon-large">
+                          <i class="ri-luggage-cart-line"></i>
+                        </div>
+                        <div class="extra-info">
+                          <h5>Extra Checked Bag</h5>
+                          <p class="extra-description">Additional 23kg checked baggage allowance</p>
+                          <div class="extra-features">
+                            <span class="feature">✓ 23kg weight limit</span>
+                            <span class="feature">✓ Standard size restrictions</span>
+                          </div>
+                        </div>
+                        <div class="extra-pricing">
+                          <div class="price-display">45 DT</div>
+                          <div class="price-label">per bag</div>
+                        </div>
+                      </div>
+                      <div class="extra-controls">
+                        <div class="quantity-selector">
+                          <button type="button" class="qty-btn" onclick="updateQuantity('extra-bag', -1)">-</button>
+                          <span class="qty-display" id="extra-bag-qty">0</span>
+                          <button type="button" class="qty-btn" onclick="updateQuantity('extra-bag', 1)">+</button>
+                        </div>
+                        <div class="total-price" id="extra-bag-total">0 DT</div>
+                      </div>
+                    </div>
+
+                    <div class="extra-item-detailed">
+                      <div class="extra-header">
+                        <div class="extra-icon-large">
+                          <i class="ri-briefcase-line"></i>
+                        </div>
+                        <div class="extra-info">
+                          <h5>Priority Baggage</h5>
+                          <p class="extra-description">First off the carousel at your destination</p>
+                          <div class="extra-features">
+                            <span class="feature">✓ Priority handling</span>
+                            <span class="feature">✓ Faster collection</span>
+                          </div>
+                        </div>
+                        <div class="extra-pricing">
+                          <div class="price-display">25 DT</div>
+                          <div class="price-label">per bag</div>
+                        </div>
+                      </div>
+                      <div class="extra-controls">
+                        <div class="quantity-selector">
+                          <button type="button" class="qty-btn" onclick="updateQuantity('priority-bag', -1)">-</button>
+                          <span class="qty-display" id="priority-bag-qty">0</span>
+                          <button type="button" class="qty-btn" onclick="updateQuantity('priority-bag', 1)">+</button>
+                        </div>
+                        <div class="total-price" id="priority-bag-total">0 DT</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Meals Section -->
+                <div class="extras-category">
+                  <h4 class="category-title">
+                    <i class="ri-restaurant-line"></i>
+                    In-Flight Dining
+                  </h4>
+                  <div class="extras-grid">
+                    <div class="extra-item-detailed">
+                      <div class="extra-header">
+                        <div class="extra-icon-large">
+                          <i class="ri-restaurant-line"></i>
+                        </div>
+                        <div class="extra-info">
+                          <h5>Premium Meal</h5>
+                          <p class="extra-description">Gourmet meal with appetizer, main course, and dessert</p>
+                          <div class="meal-options">
+                            <select class="form-select meal-select" id="premium-meal-type">
+                              <option value="">Select meal type</option>
+                              <option value="chicken">Grilled Chicken with Mediterranean Rice</option>
+                              <option value="beef">Beef Tenderloin with Roasted Vegetables</option>
+                              <option value="fish">Pan-Seared Salmon with Quinoa</option>
+                              <option value="vegetarian">Vegetarian Pasta Primavera</option>
+                              <option value="vegan">Vegan Buddha Bowl</option>
+                              <option value="halal">Halal Lamb Tagine</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="extra-pricing">
+                          <div class="price-display">35 DT</div>
+                          <div class="price-label">per meal</div>
+                        </div>
+                      </div>
+                      <div class="extra-controls">
+                        <div class="quantity-selector">
+                          <button type="button" class="qty-btn" onclick="updateQuantity('premium-meal', -1)">-</button>
+                          <span class="qty-display" id="premium-meal-qty">0</span>
+                          <button type="button" class="qty-btn" onclick="updateQuantity('premium-meal', 1)">+</button>
+                        </div>
+                        <div class="total-price" id="premium-meal-total">0 DT</div>
+                      </div>
+                    </div>
+
+                    <div class="extra-item-detailed">
+                      <div class="extra-header">
+                        <div class="extra-icon-large">
+                          <i class="ri-cup-line"></i>
+                        </div>
+                        <div class="extra-info">
+                          <h5>Beverage Package</h5>
+                          <p class="extra-description">Unlimited premium beverages during flight</p>
+                          <div class="extra-features">
+                            <span class="feature">✓ Premium coffee & tea</span>
+                            <span class="feature">✓ Soft drinks & juices</span>
+                            <span class="feature">✓ Alcoholic beverages</span>
+                          </div>
+                        </div>
+                        <div class="extra-pricing">
+                          <div class="price-display">20 DT</div>
+                          <div class="price-label">per person</div>
+                        </div>
+                      </div>
+                      <div class="extra-controls">
+                        <div class="quantity-selector">
+                          <button type="button" class="qty-btn" onclick="updateQuantity('beverage-package', -1)">-</button>
+                          <span class="qty-display" id="beverage-package-qty">0</span>
+                          <button type="button" class="qty-btn" onclick="updateQuantity('beverage-package', 1)">+</button>
+                        </div>
+                        <div class="total-price" id="beverage-package-total">0 DT</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Comfort & Services -->
+                <div class="extras-category">
+                  <h4 class="category-title">
+                    <i class="ri-service-line"></i>
+                    Comfort & Services
+                  </h4>
+                  <div class="extras-grid">
+                    <div class="extra-item-detailed">
+                      <div class="extra-header">
+                        <div class="extra-icon-large">
+                          <i class="ri-wifi-line"></i>
+                        </div>
+                        <div class="extra-info">
+                          <h5>Premium WiFi</h5>
+                          <p class="extra-description">High-speed internet access throughout your flight</p>
+                          <div class="wifi-options">
+                            <div class="wifi-plan">
+                              <input type="radio" name="wifi-plan" value="basic" id="wifi-basic">
+                              <label for="wifi-basic">Basic (1 hour) - 8 DT</label>
+                            </div>
+                            <div class="wifi-plan">
+                              <input type="radio" name="wifi-plan" value="full" id="wifi-full">
+                              <label for="wifi-full">Full Flight - 15 DT</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="extra-pricing">
+                          <div class="price-display">15 DT</div>
+                          <div class="price-label">full flight</div>
+                        </div>
+                      </div>
+                      <div class="extra-controls">
+                        <div class="quantity-selector">
+                          <button type="button" class="qty-btn" onclick="updateQuantity('wifi', -1)">-</button>
+                          <span class="qty-display" id="wifi-qty">0</span>
+                          <button type="button" class="qty-btn" onclick="updateQuantity('wifi', 1)">+</button>
+                        </div>
+                        <div class="total-price" id="wifi-total">0 DT</div>
+                      </div>
+                    </div>
+
+                    <div class="extra-item-detailed">
+                      <div class="extra-header">
+                        <div class="extra-icon-large">
+                          <i class="ri-shield-check-line"></i>
+                        </div>
+                        <div class="extra-info">
+                          <h5>Travel Insurance</h5>
+                          <p class="extra-description">Comprehensive coverage for your journey</p>
+                          <div class="insurance-coverage">
+                            <div class="coverage-item">✓ Trip cancellation up to 5000 DT</div>
+                            <div class="coverage-item">✓ Medical expenses up to 10000 DT</div>
+                            <div class="coverage-item">✓ Baggage loss/delay coverage</div>
+                            <div class="coverage-item">✓ 24/7 emergency assistance</div>
+                          </div>
+                        </div>
+                        <div class="extra-pricing">
+                          <div class="price-display">55 DT</div>
+                          <div class="price-label">per person</div>
+                        </div>
+                      </div>
+                      <div class="extra-controls">
+                        <div class="quantity-selector">
+                          <button type="button" class="qty-btn" onclick="updateQuantity('insurance', -1)">-</button>
+                          <span class="qty-display" id="insurance-qty">0</span>
+                          <button type="button" class="qty-btn" onclick="updateQuantity('insurance', 1)">+</button>
+                        </div>
+                        <div class="total-price" id="insurance-total">0 DT</div>
+                      </div>
+                    </div>
+
+                    <div class="extra-item-detailed">
+                      <div class="extra-header">
+                        <div class="extra-icon-large">
+                          <i class="ri-vip-crown-line"></i>
+                        </div>
+                        <div class="extra-info">
+                          <h5>Priority Services</h5>
+                          <p class="extra-description">Fast-track through airport with priority boarding</p>
+                          <div class="extra-features">
+                            <span class="feature">✓ Priority check-in</span>
+                            <span class="feature">✓ Fast-track security</span>
+                            <span class="feature">✓ Priority boarding</span>
+                            <span class="feature">✓ Lounge access (2 hours)</span>
+                          </div>
+                        </div>
+                        <div class="extra-pricing">
+                          <div class="price-display">75 DT</div>
+                          <div class="price-label">per person</div>
+                        </div>
+                      </div>
+                      <div class="extra-controls">
+                        <div class="quantity-selector">
+                          <button type="button" class="qty-btn" onclick="updateQuantity('priority-service', -1)">-</button>
+                          <span class="qty-display" id="priority-service-qty">0</span>
+                          <button type="button" class="qty-btn" onclick="updateQuantity('priority-service', 1)">+</button>
+                        </div>
+                        <div class="total-price" id="priority-service-total">0 DT</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Car Rental Section -->
+                <div class="extras-category">
+                  <h4 class="category-title">
+                    <i class="ri-car-line"></i>
+                    Car Rental at Destination
+                  </h4>
+                  <div class="car-rental-section">
+                    <div class="rental-search-form">
+                      <div class="row g-3 mb-4">
+                        <div class="col-md-6">
+                          <label class="form-label">Pick-up Location</label>
+                          <select class="form-select" id="carPickupLocation">
+                            <option value="">Select pick-up location</option>
+                            <option value="airport">Charles de Gaulle Airport (CDG)</option>
+                            <option value="city-center">Paris City Center</option>
+                            <option value="gare-nord">Gare du Nord Station</option>
+                            <option value="orly">Orly Airport (ORY)</option>
+                            <option value="disneyland">Disneyland Paris</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6">
+                          <label class="form-label">Drop-off Location</label>
+                          <select class="form-select" id="carDropoffLocation">
+                            <option value="">Select drop-off location</option>
+                            <option value="airport">Charles de Gaulle Airport (CDG)</option>
+                            <option value="city-center">Paris City Center</option>
+                            <option value="gare-nord">Gare du Nord Station</option>
+                            <option value="orly">Orly Airport (ORY)</option>
+                            <option value="disneyland">Disneyland Paris</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6">
+                          <label class="form-label">Pick-up Date & Time</label>
+                          <div class="datetime-group">
+                            <input type="date" class="form-control" id="carPickupDate">
+                            <select class="form-select" id="carPickupTime">
+                              <option value="09:00">09:00</option>
+                              <option value="10:00">10:00</option>
+                              <option value="11:00">11:00</option>
+                              <option value="12:00">12:00</option>
+                              <option value="13:00">13:00</option>
+                              <option value="14:00">14:00</option>
+                              <option value="15:00">15:00</option>
+                              <option value="16:00">16:00</option>
+                              <option value="17:00">17:00</option>
+                              <option value="18:00">18:00</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <label class="form-label">Drop-off Date & Time</label>
+                          <div class="datetime-group">
+                            <input type="date" class="form-control" id="carDropoffDate">
+                            <select class="form-select" id="carDropoffTime">
+                              <option value="09:00">09:00</option>
+                              <option value="10:00">10:00</option>
+                              <option value="11:00">11:00</option>
+                              <option value="12:00">12:00</option>
+                              <option value="13:00">13:00</option>
+                              <option value="14:00">14:00</option>
+                              <option value="15:00">15:00</option>
+                              <option value="16:00">16:00</option>
+                              <option value="17:00">17:00</option>
+                              <option value="18:00">18:00</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <button type="button" class="btn btn-primary" onclick="searchCars()">
+                        <i class="ri-search-line"></i> Search Available Cars
+                      </button>
+                    </div>
+
+                    <div class="car-results" id="carResults" style="display: none;">
+                      <h6 class="mt-4 mb-3">Available Vehicles</h6>
+                      <div class="car-options">
+                        <!-- Economy Car -->
+                        <div class="car-option" data-car="economy">
+                          <div class="car-image">
+                            <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Economy Car" class="car-photo">
+                          </div>
+                          <div class="car-details">
+                            <h6>Economy - Peugeot 208</h6>
+                            <div class="car-features">
+                              <span class="feature">✓ 5 Seats</span>
+                              <span class="feature">✓ Manual</span>
+                              <span class="feature">✓ A/C</span>
+                              <span class="feature">✓ 2 Bags</span>
+                            </div>
+                          </div>
+                          <div class="car-pricing">
+                            <div class="price">45 DT/day</div>
+                            <button class="btn btn-sm btn-outline-primary" onclick="selectCar('economy', 45)">Select</button>
+                          </div>
+                        </div>
+
+                        <!-- Compact Car -->
+                        <div class="car-option" data-car="compact">
+                          <div class="car-image">
+                            <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Compact Car" class="car-photo">
+                          </div>
+                          <div class="car-details">
+                            <h6>Compact - Renault Clio</h6>
+                            <div class="car-features">
+                              <span class="feature">✓ 5 Seats</span>
+                              <span class="feature">✓ Automatic</span>
+                              <span class="feature">✓ A/C</span>
+                              <span class="feature">✓ 3 Bags</span>
+                            </div>
+                          </div>
+                          <div class="car-pricing">
+                            <div class="price">65 DT/day</div>
+                            <button class="btn btn-sm btn-outline-primary" onclick="selectCar('compact', 65)">Select</button>
+                          </div>
+                        </div>
+
+                        <!-- SUV -->
+                        <div class="car-option" data-car="suv">
+                          <div class="car-image">
+                            <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="SUV" class="car-photo">
+                          </div>
+                          <div class="car-details">
+                            <h6>SUV - Peugeot 3008</h6>
+                            <div class="car-features">
+                              <span class="feature">✓ 7 Seats</span>
+                              <span class="feature">✓ Automatic</span>
+                              <span class="feature">✓ A/C</span>
+                              <span class="feature">✓ 5 Bags</span>
+                            </div>
+                          </div>
+                          <div class="car-pricing">
+                            <div class="price">95 DT/day</div>
+                            <button class="btn btn-sm btn-outline-primary" onclick="selectCar('suv', 95)">Select</button>
+                          </div>
+                        </div>
+
+                        <!-- Electric Car -->
+                        <div class="car-option" data-car="electric">
+                          <div class="car-image">
+                            <img src="https://images.unsplash.com/photo-1593941707882-a5bac6861d75?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Electric Car" class="car-photo">
+                          </div>
+                          <div class="car-details">
+                            <h6>Electric - Tesla Model 3</h6>
+                            <div class="car-features">
+                              <span class="feature">✓ 5 Seats</span>
+                              <span class="feature">✓ Automatic</span>
+                              <span class="feature">✓ Electric</span>
+                              <span class="feature">✓ 3 Bags</span>
+                            </div>
+                          </div>
+                          <div class="car-pricing">
+                            <div class="price">120 DT/day</div>
+                            <button class="btn btn-sm btn-outline-primary" onclick="selectCar('electric', 120)">Select</button>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="selected-car-summary" id="selectedCarSummary" style="display: none;">
+                        <div class="summary-header">
+                          <h6>Selected Vehicle</h6>
+                        </div>
+                        <div class="summary-details" id="carSummaryDetails"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Hotel Booking Section -->
+                <div class="extras-category">
+                  <h4 class="category-title">
+                    <i class="ri-hotel-line"></i>
+                    Hotel Accommodation
+                  </h4>
+                  <div class="hotel-booking-section">
+                    <div class="hotel-search-form">
+                      <div class="row g-3 mb-4">
+                        <div class="col-md-6">
+                          <label class="form-label">Destination City</label>
+                          <select class="form-select" id="hotelCity">
+                            <option value="">Select city</option>
+                            <option value="paris">Paris, France</option>
+                            <option value="london">London, UK</option>
+                            <option value="rome">Rome, Italy</option>
+                            <option value="istanbul">Istanbul, Turkey</option>
+                            <option value="dubai">Dubai, UAE</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6">
+                          <label class="form-label">Hotel Area</label>
+                          <select class="form-select" id="hotelArea">
+                            <option value="">Select area</option>
+                            <option value="city-center">City Center</option>
+                            <option value="airport">Near Airport</option>
+                            <option value="business">Business District</option>
+                            <option value="tourist">Tourist Area</option>
+                            <option value="beach">Beach Front</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6">
+                          <label class="form-label">Check-in Date</label>
+                          <input type="date" class="form-control" id="hotelCheckin">
+                        </div>
+                        <div class="col-md-6">
+                          <label class="form-label">Check-out Date</label>
+                          <input type="date" class="form-control" id="hotelCheckout">
+                        </div>
+                        <div class="col-md-6">
+                          <label class="form-label">Guests</label>
+                          <select class="form-select" id="hotelGuests">
+                            <option value="1">1 Guest</option>
+                            <option value="2">2 Guests</option>
+                            <option value="3">3 Guests</option>
+                            <option value="4">4 Guests</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6">
+                          <label class="form-label">Room Type</label>
+                          <select class="form-select" id="hotelRoomType">
+                            <option value="standard">Standard Room</option>
+                            <option value="deluxe">Deluxe Room</option>
+                            <option value="suite">Suite</option>
+                            <option value="family">Family Room</option>
+                          </select>
+                        </div>
+                      </div>
+                      <button type="button" class="btn btn-primary" onclick="searchHotels()">
+                        <i class="ri-search-line"></i> Search Available Hotels
+                      </button>
+                    </div>
+
+                    <div class="hotel-results" id="hotelResults" style="display: none;">
+                      <h6 class="mt-4 mb-3">Available Hotels</h6>
+                      <div class="hotel-options">
+                        <!-- 3-Star Hotel -->
+                        <div class="hotel-option" data-hotel="budget">
+                          <div class="hotel-image">
+                            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Budget Hotel" class="hotel-photo">
+                          </div>
+                          <div class="hotel-details">
+                            <h6>Hotel Central ★★★</h6>
+                            <div class="hotel-location">City Center • 2km from attractions</div>
+                            <div class="hotel-amenities">
+                              <span class="amenity">✓ Free WiFi</span>
+                              <span class="amenity">✓ Breakfast</span>
+                              <span class="amenity">✓ 24h Reception</span>
+                            </div>
+                          </div>
+                          <div class="hotel-pricing">
+                            <div class="price">85 DT/night</div>
+                            <div class="rating">8.2/10 Very Good</div>
+                            <button class="btn btn-sm btn-outline-primary" onclick="selectHotel('budget', 85)">Select</button>
+                          </div>
+                        </div>
+
+                        <!-- 4-Star Hotel -->
+                        <div class="hotel-option" data-hotel="comfort">
+                          <div class="hotel-image">
+                            <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Comfort Hotel" class="hotel-photo">
+                          </div>
+                          <div class="hotel-details">
+                            <h6>Grand Hotel Comfort ★★★★</h6>
+                            <div class="hotel-location">Business District • 1km from center</div>
+                            <div class="hotel-amenities">
+                              <span class="amenity">✓ Spa & Wellness</span>
+                              <span class="amenity">✓ Restaurant</span>
+                              <span class="amenity">✓ Fitness Center</span>
+                            </div>
+                          </div>
+                          <div class="hotel-pricing">
+                            <div class="price">145 DT/night</div>
+                            <div class="rating">9.1/10 Excellent</div>
+                            <button class="btn btn-sm btn-outline-primary" onclick="selectHotel('comfort', 145)">Select</button>
+                          </div>
+                        </div>
+
+                        <!-- 5-Star Hotel -->
+                        <div class="hotel-option" data-hotel="luxury">
+                          <div class="hotel-image">
+                            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Luxury Hotel" class="hotel-photo">
+                          </div>
+                          <div class="hotel-details">
+                            <h6>Palace Luxury Resort ★★★★★</h6>
+                            <div class="hotel-location">Premium Location • City Center</div>
+                            <div class="hotel-amenities">
+                              <span class="amenity">✓ Concierge Service</span>
+                              <span class="amenity">✓ Pool & Spa</span>
+                              <span class="amenity">✓ Fine Dining</span>
+                            </div>
+                          </div>
+                          <div class="hotel-pricing">
+                            <div class="price">280 DT/night</div>
+                            <div class="rating">9.8/10 Exceptional</div>
+                            <button class="btn btn-sm btn-outline-primary" onclick="selectHotel('luxury', 280)">Select</button>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="selected-hotel-summary" id="selectedHotelSummary" style="display: none;">
+                        <div class="summary-header">
+                          <h6>Selected Hotel</h6>
+                        </div>
+                        <div class="summary-details" id="hotelSummaryDetails"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Extras Summary -->
+                <div class="extras-summary">
+                  <div class="summary-header">
+                    <h5>Selected Extras Summary</h5>
+                  </div>
+                  <div class="summary-content" id="extrasSummary">
+                    <p class="text-muted">No extras selected</p>
+                  </div>
+                  <div class="summary-total">
+                    <div class="total-label">Total Extras:</div>
+                    <div class="total-amount" id="extrasTotal">0 DT</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="text-center mt-4">
+                <button type="button" class="btn btn-secondary me-3" onclick="prevStep(2)">
+                  <i class="ri-arrow-left-line"></i> Back to Seats
+                </button>
+                <button type="button" class="btn btn-primary" onclick="nextStep(4)">
+                  Continue to Details <i class="ri-arrow-right-line"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 4: Passenger Details -->
+        <div class="step-content" id="step4">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="text-center mb-4">Passenger Information</h2>
+              <div class="booking__container">
+                <form>
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label class="form-label">First Name *</label>
+                      <input type="text" class="form-control" name="firstName" required>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Last Name *</label>
+                      <input type="text" class="form-control" name="lastName" required>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Email Address *</label>
+                      <input type="email" class="form-control" name="email" required>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Phone Number *</label>
+                      <input type="tel" class="form-control" name="phone" required>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Date of Birth *</label>
+                      <input type="date" class="form-control" required>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Nationality *</label>
+                      <select class="form-control" required>
+                        <option value="">Select Nationality</option>
+                        <option value="TN">Tunisian</option>
+                        <option value="FR">French</option>
+                        <option value="UK">British</option>
+                        <option value="US">American</option>
+                        <option value="DE">German</option>
+                        <option value="IT">Italian</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Passport Number *</label>
+                      <input type="text" class="form-control" required>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Passport Expiry *</label>
+                      <input type="date" class="form-control" required>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              
+              <div class="text-center mt-4">
+                <button type="button" class="btn btn-secondary me-3" onclick="prevStep(3)">
+                  <i class="ri-arrow-left-line"></i> Back to Extras
+                </button>
+                <button type="button" class="btn btn-primary" onclick="nextStep(5)">
+                  Continue to Payment <i class="ri-arrow-right-line"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 5: Payment -->
+        <div class="step-content" id="step5">
+          <div class="row">
+            <div class="col-lg-10 mx-auto">
+              <h2 class="text-center mb-4">Payment & Confirmation</h2>
+              <div class="row">
+                <div class="col-lg-8">
+                  <div class="booking__container">
+                    <h4 class="mb-3">Payment Details</h4>
+                    <form>
+                      <div class="row g-3">
+                        <div class="col-12">
+                          <label class="form-label">Cardholder Name *</label>
+                          <input type="text" class="form-control" required>
+                        </div>
+                        <div class="col-12">
+                          <label class="form-label">Card Number *</label>
+                          <input type="text" class="form-control" placeholder="1234 5678 9012 3456" required>
+                        </div>
+                        <div class="col-md-6">
+                          <label class="form-label">Expiry Date *</label>
+                          <input type="text" class="form-control" placeholder="MM/YY" required>
+                        </div>
+                        <div class="col-md-6">
+                          <label class="form-label">CVV *</label>
+                          <input type="text" class="form-control" placeholder="123" required>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                
+                <div class="col-lg-4">
+                  <div class="booking-summary">
+                    <h4 class="mb-3">Booking Summary</h4>
+                    <div class="summary-card">
+                      <div class="flight-summary">
+                        <h6>Flight Details</h6>
+                        <div class="flight-route">
+                          <span id="summaryRoute">TUN → CDG</span>
+                          <span id="summaryDate">Dec 25, 2024</span>
+                        </div>
+                        <div class="flight-time">
+                          <span id="summaryTime">06:30 - 09:15</span>
+                          <span id="summaryFlight">SA101</span>
+                        </div>
+                        <div class="seat-summary">
+                          <span>Seat: <span id="summarySeat">12A</span></span>
+                          <span id="summaryClass">Economy</span>
+                        </div>
+                      </div>
+                      
+                      <div class="price-breakdown">
+                        <div class="price-item">
+                          <span>Base Fare</span>
+                          <span id="baseFare">450 DT</span>
+                        </div>
+                        <div class="price-item">
+                          <span>Seat Selection</span>
+                          <span id="seatFee">25 DT</span>
+                        </div>
+                        <div class="price-item">
+                          <span>Extras</span>
+                          <span id="extrasFee">75 DT</span>
+                        </div>
+                        <div class="price-item">
+                          <span>Taxes & Fees</span>
+                          <span>45 DT</span>
+                        </div>
+                        <hr>
+                        <div class="price-item total">
+                          <span>Total</span>
+                          <span id="totalPrice">595 DT</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="text-center mt-4">
+                <button type="button" class="btn btn-secondary me-3" onclick="prevStep(4)">
+                  <i class="ri-arrow-left-line"></i> Back to Details
+                </button>
+                <button type="button" class="btn btn-primary btn-lg" onclick="completeBooking()" id="completeBooking">
+                  <i class="ri-secure-payment-line"></i> Complete Booking
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="pro-footer">
+      <div class="pro-footer__main">
+        <div class="pro-footer__grid">
+          <div class="pro-footer__brand">
+            <div class="pro-footer__logo">
+              <span>SayadiAirways</span>
+            </div>
+            <p>Your trusted airline partner since 2020. We connect Tunisia to the world with comfort, safety, and unmatched service excellence.</p>
+            <div class="pro-footer__social">
+              <a href="https://www.facebook.com/fedi1923"><i class="ri-facebook-fill"></i></a>
+              <a href="https://twitter.com/FediSayadi" aria-label="Twitter">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M22 5.92c-.64.28-1.32.47-2.04.56.73-.44 1.28-1.13 1.54-1.95-.68.4-1.44.68-2.25.83a3.6 3.6 0 0 0-6.13 3.28A10.2 10.2 0 0 1 3.16 4.6a3.6 3.6 0 0 0 1.12 4.8c-.58-.02-1.12-.18-1.6-.45v.05a3.6 3.6 0 0 0 2.88 3.53c-.27.07-.56.09-.86.03a3.6 3.6 0 0 0 3.36 2.5A7.23 7.23 0 0 1 2 18.58 10.19 10.19 0 0 0 7.37 20c8.84 0 13.67-7.32 13.67-13.66v-.62A9.6 9.6 0 0 0 22 5.92z"/>
+                </svg>
+              </a>
+              <a href="https://www.instagram.com/sayadi.fedi/"><i class="ri-instagram-line"></i></a>
+              <a href="https://www.linkedin.com/in/fedi-sayadi-ba705b287/"><i class="ri-linkedin-fill"></i></a>
+              <a href="https://www.youtube.com/@fedisayadi7627"><i class="ri-youtube-fill"></i></a>
+            </div>
+          </div>
+          
+          <div class="pro-footer__col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="Book-Complete.html"><i class="ri-plane-line"></i> Book a Flight</a></li>
+              <li><a href="CheckIn-Complete.html"><i class="ri-checkbox-circle-line"></i> Online Check-In</a></li>
+              <li><a href="FlightStatus.html"><i class="ri-time-line"></i> Flight Status</a></li>
+              <li><a href="Explore.html"><i class="ri-map-pin-line"></i> Destinations</a></li>
+              <li><a href="Experience.html"><i class="ri-star-line"></i> Travel Experience</a></li>
+            </ul>
+          </div>
+          
+          <div class="pro-footer__col">
+            <h4>Travel Services</h4>
+            <ul>
+              <li><a href="ExtraBaggage.html"><i class="ri-luggage-cart-line"></i> Extra Baggage</a></li>
+              <li><a href="CarRental-Complete.html"><i class="ri-car-line"></i> Car Rental</a></li>
+              <li><a href="HotelBooking-Complete.html"><i class="ri-hotel-line"></i> Hotel Booking</a></li>
+              <li><a href="TravelInsurance-Complete.html"><i class="ri-shield-check-line"></i> Travel Insurance</a></li>
+              <li><a href="ModifyBooking-Complete.html"><i class="ri-edit-line"></i> Manage Booking</a></li>
+            </ul>
+          </div>
+          
+          <div class="pro-footer__col">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="Contact.html"><i class="ri-customer-service-line"></i> Contact Us</a></li>
+              <li><a href="#"><i class="ri-question-line"></i> FAQs</a></li>
+              <li><a href="#"><i class="ri-file-text-line"></i> Terms & Conditions</a></li>
+              <li><a href="#"><i class="ri-shield-line"></i> Privacy Policy</a></li>
+              <li><a href="#"><i class="ri-feedback-line"></i> Feedback</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="pro-footer__bottom">
+        <div class="pro-footer__bottom-content">
+          <div class="pro-footer__copyright">
+            &copy; 2025 SayadiAirways. All rights reserved.
+          </div>
+          <div class="pro-footer__payments">
+            <span>We accept:</span>
+            <div class="pro-footer__payment-icons">
+              <i class="ri-visa-line"></i>
+              <i class="ri-mastercard-line"></i>
+              <i class="ri-paypal-line"></i>
+              <i class="ri-bank-card-line"></i>
+            </div>
+          </div>
+          <div class="pro-footer__legal">
+            <a href="#">Cookie Policy</a>
+            <a href="#">Accessibility</a>
+            <a href="#">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+    
+    <script>
+      // Auto-fill destination from URL parameter
+      document.addEventListener('DOMContentLoaded', function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const destination = urlParams.get('destination');
+        
+        if (destination) {
+          const destinationSelect = document.querySelector('select[name="to"]');
+          if (destinationSelect) {
+            // Set the destination value
+            destinationSelect.value = destination;
+            
+            // Trigger change event to update any dependent functionality
+            destinationSelect.dispatchEvent(new Event('change'));
+            
+            // Optional: Show a notification that destination was pre-selected
+            const notification = document.createElement('div');
+            notification.className = 'alert alert-info alert-dismissible fade show';
+            notification.innerHTML = `
+              <i class="ri-information-line me-2"></i>
+              Destination pre-selected from your choice: <strong>${getDestinationName(destination)}</strong>
+              <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            `;
+            
+            // Insert notification before the search form
+            const searchForm = document.getElementById('flightSearchForm');
+            if (searchForm) {
+              searchForm.parentNode.insertBefore(notification, searchForm);
+            }
+          }
+        }
+      });
+      
+      // Helper function to get destination name from code
+      function getDestinationName(code) {
+        const destinations = {
+          // Main destinations in booking form
+          'CDG': 'Paris, France',
+          'LHR': 'London, UK',
+          'FCO': 'Rome, Italy',
+          'IST': 'Istanbul, Turkey',
+          'DXB': 'Dubai, UAE',
+          'DOH': 'Doha, Qatar',
+          'KUL': 'Kuala Lumpur, Malaysia',
+          'CGK': 'Jakarta, Indonesia',
+          'SEZ': 'Seychelles',
+          'NRT': 'Tokyo, Japan',
+          'SYD': 'Sydney, Australia',
+          'BOM': 'Mumbai, India',
+          'AMS': 'Amsterdam, Netherlands',
+          'ICN': 'Seoul, South Korea',
+          'BKK': 'Bangkok, Thailand',
+          'MRU': 'Mauritius',
+          'GIG': 'Rio de Janeiro, Brazil',
+          'JFK': 'New York, USA',
+          'JTR': 'Santorini, Greece',
+          // Additional map destinations
+          'MAD': 'Madrid, Spain',
+          'BCN': 'Barcelona, Spain',
+          'MXP': 'Milan, Italy',
+          'VIE': 'Vienna, Austria',
+          'ZUR': 'Zurich, Switzerland',
+          'CPH': 'Copenhagen, Denmark',
+          'ARN': 'Stockholm, Sweden',
+          'OSL': 'Oslo, Norway',
+          'HEL': 'Helsinki, Finland',
+          'WAW': 'Warsaw, Poland',
+          'PRG': 'Prague, Czech Republic',
+          'BUD': 'Budapest, Hungary',
+          'OTP': 'Bucharest, Romania',
+          'SOF': 'Sofia, Bulgaria',
+          'ATH': 'Athens, Greece',
+          'LIS': 'Lisbon, Portugal',
+          'DUB': 'Dublin, Ireland',
+          'BRU': 'Brussels, Belgium',
+          'LUX': 'Luxembourg',
+          'CAI': 'Cairo, Egypt',
+          'CMN': 'Casablanca, Morocco',
+          'ALG': 'Algiers, Algeria',
+          'TIP': 'Tripoli, Libya',
+          'ADD': 'Addis Ababa, Ethiopia',
+          'NBO': 'Nairobi, Kenya',
+          'CPT': 'Cape Town, South Africa',
+          'JNB': 'Johannesburg, South Africa',
+          'LAD': 'Luanda, Angola',
+          'ACC': 'Accra, Ghana',
+          'LOS': 'Lagos, Nigeria',
+          'DKR': 'Dakar, Senegal',
+          'PEK': 'Beijing, China',
+          'PVG': 'Shanghai, China',
+          'HKG': 'Hong Kong',
+          'TPE': 'Taipei, Taiwan',
+          'MNL': 'Manila, Philippines',
+          'SIN': 'Singapore',
+          'BKI': 'Kota Kinabalu, Malaysia',
+          'DEL': 'New Delhi, India',
+          'CCU': 'Kolkata, India',
+          'MAA': 'Chennai, India',
+          'HYD': 'Hyderabad, India',
+          'BLR': 'Bangalore, India',
+          'COK': 'Kochi, India',
+          'CMB': 'Colombo, Sri Lanka',
+          'DAC': 'Dhaka, Bangladesh',
+          'KTM': 'Kathmandu, Nepal',
+          'KBL': 'Kabul, Afghanistan',
+          'ISB': 'Islamabad, Pakistan',
+          'KHI': 'Karachi, Pakistan',
+          'LHE': 'Lahore, Pakistan',
+          'TAS': 'Tashkent, Uzbekistan',
+          'ALA': 'Almaty, Kazakhstan',
+          'TBS': 'Tbilisi, Georgia',
+          'EVN': 'Yerevan, Armenia',
+          'BAK': 'Baku, Azerbaijan',
+          'THR': 'Tehran, Iran',
+          'IKA': 'Tehran, Iran',
+          'BGW': 'Baghdad, Iraq',
+          'KWI': 'Kuwait City, Kuwait',
+          'BAH': 'Manama, Bahrain',
+          'MCT': 'Muscat, Oman',
+          'AUH': 'Abu Dhabi, UAE',
+          'SHJ': 'Sharjah, UAE',
+          'RUH': 'Riyadh, Saudi Arabia',
+          'JED': 'Jeddah, Saudi Arabia',
+          'DMM': 'Dammam, Saudi Arabia',
+          'AMM': 'Amman, Jordan',
+          'BEY': 'Beirut, Lebanon',
+          'DAM': 'Damascus, Syria',
+          'TLV': 'Tel Aviv, Israel',
+          'SVO': 'Moscow, Russia',
+          'LED': 'St. Petersburg, Russia',
+          'KJA': 'Krasnoyarsk, Russia',
+          'IKT': 'Irkutsk, Russia',
+          'VVO': 'Vladivostok, Russia',
+          'YEK': 'Yekaterinburg, Russia'
+        };
+        return destinations[code] || code;
+      }
+
+      let currentStep = 1;
+      let selectedFlight = null;
+      let selectedSeat = null;
+      let selectedExtras = {};
+      let extrasTotal = 0;
+      
+      // Extras pricing
+      const extrasPricing = {
+        'extra-bag': 45,
+        'priority-bag': 25,
+        'premium-meal': 35,
+        'beverage-package': 20,
+        'wifi': 15,
+        'insurance': 55,
+        'priority-service': 75
+      };
+      
+      function updateQuantity(extraId, change) {
+        const currentQty = selectedExtras[extraId] || 0;
+        const newQty = Math.max(0, currentQty + change);
+        
+        selectedExtras[extraId] = newQty;
+        
+        // Update display
+        document.getElementById(`${extraId}-qty`).textContent = newQty;
+        
+        // Update total for this extra
+        const itemTotal = newQty * extrasPricing[extraId];
+        document.getElementById(`${extraId}-total`).textContent = `${itemTotal} DT`;
+        
+        // Update overall extras total
+        updateExtrasTotal();
+        updateExtrasSummary();
+      }
+      
+      function updateExtrasTotal() {
+        extrasTotal = 0;
+        for (const [extraId, quantity] of Object.entries(selectedExtras)) {
+          if (quantity > 0) {
+            extrasTotal += quantity * extrasPricing[extraId];
+          }
+        }
+        document.getElementById('extrasTotal').textContent = `${extrasTotal} DT`;
+      }
+      
+      function updateExtrasSummary() {
+        const summaryContent = document.getElementById('extrasSummary');
+        const selectedItems = [];
+        
+        for (const [extraId, quantity] of Object.entries(selectedExtras)) {
+          if (quantity > 0) {
+            const itemName = getExtraDisplayName(extraId);
+            const itemTotal = quantity * extrasPricing[extraId];
+            selectedItems.push(`${itemName} (${quantity}x) - ${itemTotal} DT`);
+          }
+        }
+        
+        if (selectedItems.length === 0) {
+          summaryContent.innerHTML = '<p class="text-muted">No extras selected</p>';
+        } else {
+          summaryContent.innerHTML = selectedItems.map(item => 
+            `<div class="summary-item">${item}</div>`
+          ).join('');
+        }
+      }
+      
+      function getExtraDisplayName(extraId) {
+        const names = {
+          'extra-bag': 'Extra Checked Bag',
+          'priority-bag': 'Priority Baggage',
+          'premium-meal': 'Premium Meal',
+          'beverage-package': 'Beverage Package',
+          'wifi': 'Premium WiFi',
+          'insurance': 'Travel Insurance',
+          'priority-service': 'Priority Services'
+        };
+        return names[extraId] || extraId;
+      }
+      
+      // Handle WiFi plan selection
+      document.addEventListener('change', function(e) {
+        if (e.target.name === 'wifi-plan') {
+          const wifiPricing = {
+            'basic': 8,
+            'full': 15
+          };
+          extrasPricing['wifi'] = wifiPricing[e.target.value];
+          
+          // Update display if WiFi is selected
+          if (selectedExtras['wifi'] > 0) {
+            const itemTotal = selectedExtras['wifi'] * extrasPricing['wifi'];
+            document.getElementById('wifi-total').textContent = `${itemTotal} DT`;
+            updateExtrasTotal();
+            updateExtrasSummary();
+          }
+        }
+      });
+      
+      function searchFlights() {
+        const from = document.querySelector('[name="from"]').value;
+        const to = document.querySelector('[name="to"]').value;
+        const departure = document.querySelector('[name="departure"]').value;
+        
+        if (!from || !to || !departure) {
+          alert('Please fill in all required fields');
+          return;
+        }
+        
+        // Update route display
+        document.getElementById('outboundRoute').textContent = `${from} → ${to}`;
+        
+        // Show flight results
+        document.getElementById('flightResults').style.display = 'block';
+        
+        // Scroll to results
+        document.getElementById('flightResults').scrollIntoView({ behavior: 'smooth' });
+      }
+      
+      function selectFlight(flightCard, direction) {
+        // Remove previous selection
+        document.querySelectorAll('.flight-card').forEach(card => {
+          card.classList.remove('selected');
+        });
+        
+        // Select current flight
+        flightCard.classList.add('selected');
+        selectedFlight = {
+          direction: direction,
+          element: flightCard
+        };
+        
+        // Enable continue button
+        document.getElementById('continueToSeatBtn').disabled = false;
+      }
+      
+      function generateSeatMap() {
+        const seatMap = document.getElementById('seatMap');
+        seatMap.innerHTML = '';
+        
+        // Generate 30 rows for economy class
+        for (let row = 1; row <= 30; row++) {
+          const rowDiv = document.createElement('div');
+          rowDiv.className = 'seat-row';
+          rowDiv.innerHTML = `
+            <div class="row-number">${row}</div>
+            <div class="seat-group">
+              ${generateSeat(row, 'A')}
+              ${generateSeat(row, 'B')}
+              ${generateSeat(row, 'C')}
+            </div>
+            <div class="aisle"></div>
+            <div class="seat-group">
+              ${generateSeat(row, 'D')}
+              ${generateSeat(row, 'E')}
+              ${generateSeat(row, 'F')}
+            </div>
+            <div class="row-number">${row}</div>
+          `;
+          seatMap.appendChild(rowDiv);
+        }
+      }
+      
+      function generateSeat(row, letter) {
+        const isOccupied = Math.random() < 0.3; // 30% occupied
+        const isPremium = row <= 5 || (row >= 12 && row <= 14); // First 5 rows and exit rows
+        const seatId = `${row}${letter}`;
+        
+        let seatClass = 'seat';
+        if (isOccupied) {
+          seatClass += ' occupied';
+        } else if (isPremium) {
+          seatClass += ' premium';
+        } else {
+          seatClass += ' available';
+        }
+        
+        return `<div class="${seatClass}" data-seat="${seatId}" onclick="selectSeat('${seatId}', this)" ${isOccupied ? 'style="pointer-events: none;"' : ''}>${seatId}</div>`;
+      }
+      
+      function selectSeat(seatId, seatElement) {
+        // Remove previous selection
+        document.querySelectorAll('.seat.selected').forEach(seat => {
+          seat.classList.remove('selected');
+        });
+        
+        // Select current seat
+        seatElement.classList.add('selected');
+        selectedSeat = seatId;
+        
+        // Update seat info panel
+        const isPremium = seatElement.classList.contains('premium');
+        const seatFee = isPremium ? 25 : 0;
+        
+        document.getElementById('selectedSeatInfo').innerHTML = `
+          <div class="selected-seat-details">
+            <h6>Selected Seat: ${seatId}</h6>
+            <p class="seat-type">${isPremium ? 'Premium Seat' : 'Standard Seat'}</p>
+            <p class="seat-price">Additional Fee: ${seatFee} DT</p>
+            <div class="seat-features">
+              ${isPremium ? '<span class="feature">✓ Extra Legroom</span>' : ''}
+              ${isPremium ? '<span class="feature">✓ Priority Boarding</span>' : ''}
+              <span class="feature">✓ Personal Entertainment</span>
+            </div>
+          </div>
+        `;
+      }
+      
+      function nextStep(step) {
+        // Special handling for step 2 (seat selection)
+        if (step === 2) {
+          generateSeatMap();
+        }
+        
+        // Hide current step
+        document.getElementById(`step${currentStep}`).classList.remove('active');
+        document.querySelector(`.process-step:nth-child(${currentStep * 2 - 1}) .step-number`).classList.remove('active');
+        
+        // Show next step
+        currentStep = step;
+        document.getElementById(`step${currentStep}`).classList.add('active');
+        document.querySelector(`.process-step:nth-child(${currentStep * 2 - 1}) .step-number`).classList.add('active');
+        
+        // Update connectors
+        for (let i = 1; i < currentStep; i++) {
+          document.querySelector(`.step-connector:nth-child(${i * 2})`).classList.add('completed');
+        }
+        
+        // Scroll to top
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+      
+      function prevStep(step) {
+        nextStep(step);
+      }
+      
+      function toggleExtra(button) {
+        const extraItem = button.closest('.extra-item');
+        extraItem.classList.toggle('selected');
+        
+        if (extraItem.classList.contains('selected')) {
+          button.textContent = 'Selected ✓';
+          button.style.background = 'var(--accent-color)';
+        } else {
+          button.textContent = button.textContent.replace(' ✓', '').replace('Selected', 'Select');
+          button.style.background = '';
+        }
+      }
+      
+      function completeBooking() {
+        // Collect booking data
+        const bookingData = {
+          reference: 'SA' + Date.now(),
+          passengerName: document.querySelector('[name="firstName"]')?.value + ' ' + 
+                        document.querySelector('[name="lastName"]')?.value,
+          email: document.querySelector('[name="email"]')?.value,
+          phone: document.querySelector('[name="phone"]')?.value,
+          from: document.querySelector('[name="from"]')?.value,
+          to: document.querySelector('[name="to"]')?.value,
+          departure: document.querySelector('[name="departure"]')?.value,
+          seat: selectedSeat,
+          flight: selectedFlight
+        };
+        
+        // Generate PDF and send email (functions from main script.js)
+        if (typeof generateBookingPDF === 'function') {
+          generateBookingPDF(bookingData);
+        }
+        if (typeof sendBookingEmail === 'function') {
+          sendBookingEmail(bookingData);
+        }
+        if (typeof showBookingSuccess === 'function') {
+          showBookingSuccess(bookingData);
+        }
+        
+        alert('Booking completed successfully! Check your email for confirmation.');
+      }
+    </script>
+  </body>
+</html>

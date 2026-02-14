@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css?v=1.2" />
+    <title>SayadiAirways - Modify Booking</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="Home.html">
+          <span class="nav__brand ms-2">SayadiAirways</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="text-white"><i class="ri-menu-3-line"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Home.html"><i class="ri-home-line"></i> Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Book-Complete.html"><i class="ri-plane-line"></i> Book</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Explore.html"><i class="ri-map-pin-line"></i> Explore</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Experience.html"><i class="ri-gift-line"></i> Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Contact.html"><i class="ri-phone-line"></i> Contact</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="ri-briefcase-line"></i> Manage
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Manage-New.html"><i class="ri-search-line"></i> Find Booking</a></li>
+                <li><a class="dropdown-item active" href="ModifyBooking-Complete.html"><i class="ri-edit-box-line"></i> Modify Booking</a></li>
+                <li><a class="dropdown-item" href="CancelBooking-Complete.html"><i class="ri-close-circle-line"></i> Cancel Booking</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="CheckIn-Complete.html"><i class="ri-calendar-check-line"></i> Check-In</a></li>
+                <li><a class="dropdown-item" href="FlightStatus.html"><i class="ri-flight-takeoff-line"></i> Flight Status</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="ri-add-circle-line"></i> Extras
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Extras.html"><i class="ri-service-line"></i> All Extras</a></li>
+                <li><a class="dropdown-item" href="ExtraBaggage.html"><i class="ri-luggage-cart-line"></i> Extra Baggage</a></li>
+                <li><a class="dropdown-item" href="CarRental-Complete.html"><i class="ri-car-line"></i> Car Rental</a></li>
+                <li><a class="dropdown-item" href="HotelBooking-Complete.html"><i class="ri-hotel-line"></i> Hotel</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="TravelInsurance-Complete.html"><i class="ri-shield-line"></i> Travel Insurance</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Login.html"><i class="ri-user-line"></i> Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Modify Booking Section -->
+    <section class="section__container" style="min-height: 80vh;">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="text-center mb-5">
+              <h1><i class="ri-edit-box-line me-3"></i>Modify Your Booking</h1>
+              <p class="lead">Make changes to your existing reservation quickly and easily</p>
+            </div>
+            
+            <!-- Step 1: Find Booking -->
+            <div class="booking__container mb-4" id="findBookingStep">
+              <h3 class="mb-4"><i class="ri-search-line me-2"></i>Step 1: Find Your Booking</h3>
+              
+              <div class="alert alert-info">
+                <i class="ri-information-line me-2"></i>
+                <strong>Note:</strong> Modification fees may apply depending on your fare type and timing. Changes must be made at least 24 hours before departure.
+              </div>
+              
+              <form id="findBookingForm">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label">Booking Reference *</label>
+                    <div class="input__group">
+                      <i class="ri-bookmark-line input__icon"></i>
+                      <input type="text" class="form-control" id="bookingRef" placeholder="e.g., SA123456" required>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Last Name *</label>
+                    <div class="input__group">
+                      <i class="ri-user-line input__icon"></i>
+                      <input type="text" class="form-control" id="lastName" placeholder="As shown on booking" required>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="text-center mt-4">
+                  <button type="submit" class="btn btn-primary btn-lg px-5">
+                    <i class="ri-search-line me-2"></i>Find My Booking
+                  </button>
+                </div>
+              </form>
+            </div>
+            
+            <!-- Step 2: Booking Details (Hidden initially) -->
+            <div class="booking__container mb-4" id="bookingDetailsStep" style="display: none;">
+              <h3 class="mb-4"><i class="ri-flight-takeoff-line me-2"></i>Step 2: Current Booking Details</h3>
+              
+              <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-8">
+                      <h5 class="text-primary mb-3">Flight SA1234 - Economy Class</h5>
+                      <div class="row">
+                        <div class="col-6">
+                          <strong>From:</strong> Tunis (TUN)<br>
+                          <small class="text-muted">Tunis-Carthage Airport</small><br>
+                          <strong>Date:</strong> March 15, 2024<br>
+                          <strong>Time:</strong> 14:30
+                        </div>
+                        <div class="col-6">
+                          <strong>To:</strong> Paris (CDG)<br>
+                          <small class="text-muted">Charles de Gaulle Airport</small><br>
+                          <strong>Date:</strong> March 15, 2024<br>
+                          <strong>Time:</strong> 17:45
+                        </div>
+                      </div>
+                      <hr>
+                      <strong>Passenger:</strong> John Doe<br>
+                      <strong>Seat:</strong> 12A (Window)
+                    </div>
+                    <div class="col-md-4 text-end">
+                      <div class="badge bg-success mb-2">Confirmed</div><br>
+                      <strong>Total Paid:</strong> 750DT<br>
+                      <small class="text-muted">Booking Ref: SA123456</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="text-center">
+                <button class="btn btn-primary btn-lg px-5" onclick="showModificationOptions()">
+                  <i class="ri-edit-line me-2"></i>Modify This Booking
+                </button>
+              </div>
+            </div>
+            
+            <!-- Step 3: Modification Options (Hidden initially) -->
+            <div class="booking__container" id="modificationOptionsStep" style="display: none;">
+              <h3 class="mb-4"><i class="ri-settings-line me-2"></i>Step 3: What Would You Like to Modify?</h3>
+              
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <div class="card h-100 border-0 shadow-sm modification-option" data-option="dates">
+                    <div class="card-body text-center p-4">
+                      <div class="mb-3">
+                        <i class="ri-calendar-line" style="font-size: 3rem; color: var(--primary-color);"></i>
+                      </div>
+                      <h5>Change Dates</h5>
+                      <p class="text-muted">Modify your departure or return dates</p>
+                      <div class="badge bg-warning text-dark">Fee: 50-150DT</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-md-6">
+                  <div class="card h-100 border-0 shadow-sm modification-option" data-option="seats">
+                    <div class="card-body text-center p-4">
+                      <div class="mb-3">
+                        <i class="ri-reserved-line" style="font-size: 3rem; color: var(--primary-color);"></i>
+                      </div>
+                      <h5>Change Seats</h5>
+                      <p class="text-muted">Select different seats on your flight</p>
+                      <div class="badge bg-success">Free - 80DT</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-md-6">
+                  <div class="card h-100 border-0 shadow-sm modification-option" data-option="upgrade">
+                    <div class="card-body text-center p-4">
+                      <div class="mb-3">
+                        <i class="ri-vip-crown-line" style="font-size: 3rem; color: var(--primary-color);"></i>
+                      </div>
+                      <h5>Upgrade Class</h5>
+                      <p class="text-muted">Upgrade to Business or First Class</p>
+                      <div class="badge bg-info">From 300DT</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-md-6">
+                  <div class="card h-100 border-0 shadow-sm modification-option" data-option="services">
+                    <div class="card-body text-center p-4">
+                      <div class="mb-3">
+                        <i class="ri-service-line" style="font-size: 3rem; color: var(--primary-color);"></i>
+                      </div>
+                      <h5>Add Services</h5>
+                      <p class="text-muted">Extra baggage, meals, or other services</p>
+                      <div class="badge bg-primary">Various Prices</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-md-6">
+                  <div class="card h-100 border-0 shadow-sm modification-option" data-option="passenger">
+                    <div class="card-body text-center p-4">
+                      <div class="mb-3">
+                        <i class="ri-user-settings-line" style="font-size: 3rem; color: var(--primary-color);"></i>
+                      </div>
+                      <h5>Passenger Details</h5>
+                      <p class="text-muted">Correct name spelling or details</p>
+                      <div class="badge bg-warning text-dark">Fee: 100DT</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-md-6">
+                  <div class="card h-100 border-0 shadow-sm modification-option" data-option="destination">
+                    <div class="card-body text-center p-4">
+                      <div class="mb-3">
+                        <i class="ri-map-pin-line" style="font-size: 3rem; color: var(--primary-color);"></i>
+                      </div>
+                      <h5>Change Destination</h5>
+                      <p class="text-muted">Modify your destination city</p>
+                      <div class="badge bg-danger">Fee: 200-500DT</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="alert alert-warning mt-4">
+                <i class="ri-alert-line me-2"></i>
+                <strong>Important:</strong> All modifications are subject to availability and fare differences. Additional charges may apply based on the new booking conditions.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="pro-footer">
+      <div class="pro-footer__main">
+        <div class="pro-footer__grid">
+          <div class="pro-footer__brand">
+            <div class="pro-footer__logo">
+              <span>SayadiAirways</span>
+            </div>
+            <p>Your trusted airline partner since 2020. We connect Tunisia to the world with comfort, safety, and unmatched service excellence.</p>
+            <div class="pro-footer__social">
+              <a href="https://www.facebook.com/fedi1923"><i class="ri-facebook-fill"></i></a>
+              <a href="https://twitter.com/FediSayadi" aria-label="Twitter">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M22 5.92c-.64.28-1.32.47-2.04.56.73-.44 1.28-1.13 1.54-1.95-.68.4-1.44.68-2.25.83a3.6 3.6 0 0 0-6.13 3.28A10.2 10.2 0 0 1 3.16 4.6a3.6 3.6 0 0 0 1.12 4.8c-.58-.02-1.12-.18-1.6-.45v.05a3.6 3.6 0 0 0 2.88 3.53c-.27.07-.56.09-.86.03a3.6 3.6 0 0 0 3.36 2.5A7.23 7.23 0 0 1 2 18.58 10.19 10.19 0 0 0 7.37 20c8.84 0 13.67-7.32 13.67-13.66v-.62A9.6 9.6 0 0 0 22 5.92z"/>
+                </svg>
+              </a>
+              <a href="https://www.instagram.com/sayadi.fedi/"><i class="ri-instagram-line"></i></a>
+              <a href="https://www.linkedin.com/in/fedi-sayadi-ba705b287/"><i class="ri-linkedin-fill"></i></a>
+              <a href="https://www.youtube.com/@fedisayadi7627"><i class="ri-youtube-fill"></i></a>
+            </div>
+          </div>
+          
+          <div class="pro-footer__col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="Book-Complete.html"><i class="ri-plane-line"></i> Book a Flight</a></li>
+              <li><a href="CheckIn-Complete.html"><i class="ri-checkbox-circle-line"></i> Online Check-In</a></li>
+              <li><a href="FlightStatus.html"><i class="ri-time-line"></i> Flight Status</a></li>
+              <li><a href="Explore.html"><i class="ri-map-pin-line"></i> Destinations</a></li>
+              <li><a href="Experience.html"><i class="ri-star-line"></i> Travel Experience</a></li>
+            </ul>
+          </div>
+          
+          <div class="pro-footer__col">
+            <h4>Travel Services</h4>
+            <ul>
+              <li><a href="ExtraBaggage.html"><i class="ri-luggage-cart-line"></i> Extra Baggage</a></li>
+              <li><a href="CarRental-Complete.html"><i class="ri-car-line"></i> Car Rental</a></li>
+              <li><a href="HotelBooking-Complete.html"><i class="ri-hotel-line"></i> Hotel Booking</a></li>
+              <li><a href="TravelInsurance-Complete.html"><i class="ri-shield-check-line"></i> Travel Insurance</a></li>
+              <li><a href="ModifyBooking-Complete.html"><i class="ri-edit-line"></i> Manage Booking</a></li>
+            </ul>
+          </div>
+          
+          <div class="pro-footer__col">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="Contact.html"><i class="ri-customer-service-line"></i> Contact Us</a></li>
+              <li><a href="#"><i class="ri-question-line"></i> FAQs</a></li>
+              <li><a href="#"><i class="ri-file-text-line"></i> Terms & Conditions</a></li>
+              <li><a href="#"><i class="ri-shield-line"></i> Privacy Policy</a></li>
+              <li><a href="#"><i class="ri-feedback-line"></i> Feedback</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="pro-footer__bottom">
+        <div class="pro-footer__bottom-content">
+          <div class="pro-footer__copyright">
+            &copy; 2025 SayadiAirways. All rights reserved.
+          </div>
+          <div class="pro-footer__payments">
+            <span>We accept:</span>
+            <div class="pro-footer__payment-icons">
+              <i class="ri-visa-line"></i>
+              <i class="ri-mastercard-line"></i>
+              <i class="ri-paypal-line"></i>
+              <i class="ri-bank-card-line"></i>
+            </div>
+          </div>
+          <div class="pro-footer__legal">
+            <a href="#">Cookie Policy</a>
+            <a href="#">Accessibility</a>
+            <a href="#">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+    
+    <script>
+      // Modify Booking Functionality
+      document.getElementById('findBookingForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const bookingRef = document.getElementById('bookingRef').value;
+        const lastName = document.getElementById('lastName').value;
+        
+        if (bookingRef && lastName) {
+          // Simulate booking lookup
+          setTimeout(() => {
+            document.getElementById('findBookingStep').style.display = 'none';
+            document.getElementById('bookingDetailsStep').style.display = 'block';
+            
+            // Scroll to booking details
+            document.getElementById('bookingDetailsStep').scrollIntoView({ behavior: 'smooth' });
+          }, 1000);
+        }
+      });
+      
+      function showModificationOptions() {
+        document.getElementById('bookingDetailsStep').style.display = 'none';
+        document.getElementById('modificationOptionsStep').style.display = 'block';
+        
+        // Scroll to modification options
+        document.getElementById('modificationOptionsStep').scrollIntoView({ behavior: 'smooth' });
+      }
+      
+      // Modification option selection
+      document.querySelectorAll('.modification-option').forEach(option => {
+        option.addEventListener('click', function() {
+          const optionType = this.getAttribute('data-option');
+          
+          // Remove active class from all options
+          document.querySelectorAll('.modification-option').forEach(opt => {
+            opt.classList.remove('border-primary');
+          });
+          
+          // Add active class to selected option
+          this.classList.add('border-primary');
+          
+          // Show appropriate modification form based on selection
+          showModificationForm(optionType);
+        });
+      });
+      
+      function showModificationForm(type) {
+        let message = '';
+        
+        switch(type) {
+          case 'dates':
+            message = 'Date change form would appear here. You can select new departure/return dates with available flights and fare differences.';
+            break;
+          case 'seats':
+            message = 'Seat selection map would appear here. You can choose from available seats with pricing information.';
+            break;
+          case 'upgrade':
+            message = 'Class upgrade options would appear here. You can see available business/first class seats and upgrade prices.';
+            break;
+          case 'services':
+            message = 'Additional services form would appear here. You can add extra baggage, meals, or other services.';
+            break;
+          case 'passenger':
+            message = 'Passenger details form would appear here. You can correct name spelling or update passenger information.';
+            break;
+          case 'destination':
+            message = 'Destination change form would appear here. You can select a new destination with fare differences.';
+            break;
+        }
+        
+        alert(message + '\n\nThis is a demo - in a real system, this would show the appropriate modification form.');
+      }
+    </script>
+  </body>
+</html>

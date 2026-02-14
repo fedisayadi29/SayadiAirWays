@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css?v=1.2" />
+    <title>SayadiAirways - Login</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="Home.html">
+          <span class="nav__brand ms-2">SayadiAirways</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="text-white"><i class="ri-menu-3-line"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Home.html"><i class="ri-home-line"></i> Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Book-Complete.html"><i class="ri-plane-line"></i> Book</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Explore.html"><i class="ri-map-pin-line"></i> Explore</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Experience.html"><i class="ri-gift-line"></i> Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Contact.html"><i class="ri-phone-line"></i> Contact</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="ri-briefcase-line"></i> Manage
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Manage-New.html"><i class="ri-search-line"></i> Find Booking</a></li>
+                <li><a class="dropdown-item" href="ModifyBooking-Complete.html"><i class="ri-edit-box-line"></i> Modify Booking</a></li>
+                <li><a class="dropdown-item" href="CancelBooking-Complete.html"><i class="ri-close-circle-line"></i> Cancel Booking</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="CheckIn-Complete.html"><i class="ri-calendar-check-line"></i> Check-In</a></li>
+                <li><a class="dropdown-item" href="FlightStatus.html"><i class="ri-flight-takeoff-line"></i> Flight Status</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="ri-add-circle-line"></i> Extras
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Extras.html"><i class="ri-service-line"></i> All Extras</a></li>
+                <li><a class="dropdown-item" href="ExtraBaggage.html"><i class="ri-luggage-cart-line"></i> Extra Baggage</a></li>
+                <li><a class="dropdown-item" href="CarRental-Complete.html"><i class="ri-car-line"></i> Car Rental</a></li>
+                <li><a class="dropdown-item" href="HotelBooking-Complete.html"><i class="ri-hotel-line"></i> Hotel</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="TravelInsurance-Complete.html"><i class="ri-shield-line"></i> Travel Insurance</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white active" aria-current="page" href="Login.html"><i class="ri-user-line"></i> Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Login Section -->
+    <section class="section__container" style="min-height: 80vh; display: flex; align-items: center;">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 mx-auto">
+            <div class="booking__container">
+              <div class="text-center mb-4">
+                <h2>Welcome Back</h2>
+                <p class="text-muted">Sign in to your SayadiAirways account</p>
+              </div>
+              
+              <form id="loginForm">
+                <div class="form-group">
+                  <label class="form-label">Email Address *</label>
+                  <div class="input__group">
+                    <i class="ri-mail-line input__icon"></i>
+                    <input type="email" class="form-control" name="email" required>
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <label class="form-label">Password *</label>
+                  <div class="input__group">
+                    <i class="ri-lock-line input__icon"></i>
+                    <input type="password" class="form-control" name="password" required>
+                  </div>
+                </div>
+                
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="rememberMe">
+                    <label class="form-check-label" for="rememberMe">
+                      Remember me
+                    </label>
+                  </div>
+                  <a href="#" class="text-primary">Forgot password?</a>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-lg w-100 mb-3">
+                  <i class="ri-login-circle-line"></i> Sign In
+                </button>
+                
+                <div class="text-center">
+                  <p class="text-muted">Don't have an account? <a href="SignUp.html" class="text-primary">Sign up</a></p>
+                </div>
+              </form>
+              
+              <hr class="my-4">
+              
+              <div class="text-center">
+                <p class="text-muted mb-3">Or continue with</p>
+                <div class="d-flex gap-2">
+                  <button class="btn btn-outline-primary flex-fill">
+                    <i class="ri-google-line"></i> Google
+                  </button>
+                  <button class="btn btn-outline-primary flex-fill">
+                    <i class="ri-facebook-line"></i> Facebook
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sayadinho Club Benefits -->
+    <section class="section__container" style="background: var(--light-bg);">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section__header mb-4">Join Sayadinho Club</h2>
+            <p class="lead mb-4">Unlock exclusive benefits and rewards with our loyalty program</p>
+            
+            <div class="row g-4">
+              <div class="col-md-4">
+                <div class="why__card">
+                  <div class="why__icon">
+                    <i class="ri-vip-crown-line"></i>
+                  </div>
+                  <h3>Priority Boarding</h3>
+                  <p>Skip the lines and board first on all flights</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="why__card">
+                  <div class="why__icon">
+                    <i class="ri-gift-line"></i>
+                  </div>
+                  <h3>Exclusive Discounts</h3>
+                  <p>Get special member-only prices and promotions</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="why__card">
+                  <div class="why__icon">
+                    <i class="ri-star-line"></i>
+                  </div>
+                  <h3>Earn Points</h3>
+                  <p>Collect points on every flight and redeem for rewards</p>
+                </div>
+              </div>
+            </div>
+            
+            <button class="btn btn-primary btn-lg mt-4">
+              <i class="ri-user-add-line"></i> Join Sayadinho Club
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="pro-footer">
+      <div class="pro-footer__main">
+        <div class="pro-footer__grid">
+          <div class="pro-footer__brand">
+            <div class="pro-footer__logo">
+              <span>SayadiAirways</span>
+            </div>
+            <p>Your trusted airline partner since 2020. We connect Tunisia to the world with comfort, safety, and unmatched service excellence.</p>
+            <div class="pro-footer__social">
+              <a href="https://www.facebook.com/fedi1923"><i class="ri-facebook-fill"></i></a>
+              <a href="https://twitter.com/FediSayadi" aria-label="Twitter">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M22 5.92c-.64.28-1.32.47-2.04.56.73-.44 1.28-1.13 1.54-1.95-.68.4-1.44.68-2.25.83a3.6 3.6 0 0 0-6.13 3.28A10.2 10.2 0 0 1 3.16 4.6a3.6 3.6 0 0 0 1.12 4.8c-.58-.02-1.12-.18-1.6-.45v.05a3.6 3.6 0 0 0 2.88 3.53c-.27.07-.56.09-.86.03a3.6 3.6 0 0 0 3.36 2.5A7.23 7.23 0 0 1 2 18.58 10.19 10.19 0 0 0 7.37 20c8.84 0 13.67-7.32 13.67-13.66v-.62A9.6 9.6 0 0 0 22 5.92z"/>
+                </svg>
+              </a>
+              <a href="https://www.instagram.com/sayadi.fedi/"><i class="ri-instagram-line"></i></a>
+              <a href="https://www.linkedin.com/in/fedi-sayadi-ba705b287/"><i class="ri-linkedin-fill"></i></a>
+              <a href="https://www.youtube.com/@fedisayadi7627"><i class="ri-youtube-fill"></i></a>
+            </div>
+          </div>
+          
+          <div class="pro-footer__col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="Book-Complete.html"><i class="ri-plane-line"></i> Book a Flight</a></li>
+              <li><a href="CheckIn-Complete.html"><i class="ri-checkbox-circle-line"></i> Online Check-In</a></li>
+              <li><a href="FlightStatus.html"><i class="ri-time-line"></i> Flight Status</a></li>
+              <li><a href="Explore.html"><i class="ri-map-pin-line"></i> Destinations</a></li>
+              <li><a href="Experience.html"><i class="ri-star-line"></i> Travel Experience</a></li>
+            </ul>
+          </div>
+          
+          <div class="pro-footer__col">
+            <h4>Travel Services</h4>
+            <ul>
+              <li><a href="ExtraBaggage.html"><i class="ri-luggage-cart-line"></i> Extra Baggage</a></li>
+              <li><a href="CarRental-Complete.html"><i class="ri-car-line"></i> Car Rental</a></li>
+              <li><a href="HotelBooking-Complete.html"><i class="ri-hotel-line"></i> Hotel Booking</a></li>
+              <li><a href="TravelInsurance-Complete.html"><i class="ri-shield-check-line"></i> Travel Insurance</a></li>
+              <li><a href="ModifyBooking-Complete.html"><i class="ri-edit-line"></i> Manage Booking</a></li>
+            </ul>
+          </div>
+          
+          <div class="pro-footer__col">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="Contact.html"><i class="ri-customer-service-line"></i> Contact Us</a></li>
+              <li><a href="#"><i class="ri-question-line"></i> FAQs</a></li>
+              <li><a href="#"><i class="ri-file-text-line"></i> Terms & Conditions</a></li>
+              <li><a href="#"><i class="ri-shield-line"></i> Privacy Policy</a></li>
+              <li><a href="#"><i class="ri-feedback-line"></i> Feedback</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="pro-footer__bottom">
+        <div class="pro-footer__bottom-content">
+          <div class="pro-footer__copyright">
+            &copy; 2025 SayadiAirways. All rights reserved.
+          </div>
+          <div class="pro-footer__payments">
+            <span>We accept:</span>
+            <div class="pro-footer__payment-icons">
+              <i class="ri-visa-line"></i>
+              <i class="ri-mastercard-line"></i>
+              <i class="ri-paypal-line"></i>
+              <i class="ri-bank-card-line"></i>
+            </div>
+          </div>
+          <div class="pro-footer__legal">
+            <a href="#">Cookie Policy</a>
+            <a href="#">Accessibility</a>
+            <a href="#">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+    
+    <script>
+      document.getElementById('loginForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Login successful! (This is a demo)');
+        window.location.href = 'Home.html';
+      });
+    </script>
+  </body>
+</html>

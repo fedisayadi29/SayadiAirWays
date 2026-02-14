@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>SayadiAirways - Sign Up</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="Home.html">
+          <span class="nav__brand ms-2">SayadiAirways</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="text-white"><i class="ri-menu-3-line"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Home.html"><i class="ri-home-line"></i> Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Book-Complete.html"><i class="ri-plane-line"></i> Book</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Explore.html"><i class="ri-map-pin-line"></i> Explore</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Experience.html"><i class="ri-gift-line"></i> Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Contact.html"><i class="ri-phone-line"></i> Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Login.html"><i class="ri-user-line"></i> Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Sign Up Section -->
+    <section class="section__container" style="min-height: 100vh; background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); padding-top: 2rem;">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 col-md-8">
+            <div class="card shadow-lg border-0" style="border-radius: 1rem;">
+              <div class="card-body p-5">
+                <div class="text-center mb-4">
+                  <h2 class="fw-bold text-primary">Join SayadiAirways</h2>
+                  <p class="text-muted">Create your account and start your journey</p>
+                </div>
+
+                <form id="signupForm" class="needs-validation" novalidate>
+                  <!-- Personal Information -->
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label for="firstName" class="form-label">First Name *</label>
+                      <div class="input__group">
+                        <i class="input__icon ri-user-line"></i>
+                        <input type="text" class="form-control" id="firstName" name="firstName" required>
+                        <div class="invalid-feedback">Please provide your first name.</div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label for="lastName" class="form-label">Last Name *</label>
+                      <div class="input__group">
+                        <i class="input__icon ri-user-line"></i>
+                        <input type="text" class="form-control" id="lastName" name="lastName" required>
+                        <div class="invalid-feedback">Please provide your last name.</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Email Address *</label>
+                    <div class="input__group">
+                      <i class="input__icon ri-mail-line"></i>
+                      <input type="email" class="form-control" id="email" name="email" required>
+                      <div class="invalid-feedback">Please provide a valid email address.</div>
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="phone" class="form-label">Phone Number *</label>
+                    <div class="input__group">
+                      <i class="input__icon ri-phone-line"></i>
+                      <input type="tel" class="form-control" id="phone" name="phone" required>
+                      <div class="invalid-feedback">Please provide your phone number.</div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label for="dateOfBirth" class="form-label">Date of Birth *</label>
+                      <div class="input__group">
+                        <i class="input__icon ri-calendar-line"></i>
+                        <input type="date" class="form-control" id="dateOfBirth" name="dateOfBirth" required>
+                        <div class="invalid-feedback">Please provide your date of birth.</div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label for="nationality" class="form-label">Nationality *</label>
+                      <div class="input__group">
+                        <i class="input__icon ri-flag-line"></i>
+                        <select class="form-control" id="nationality" name="nationality" required>
+                          <option value="">Select Nationality</option>
+                          <option value="TN">Tunisia</option>
+                          <option value="FR">France</option>
+                          <option value="DE">Germany</option>
+                          <option value="IT">Italy</option>
+                          <option value="ES">Spain</option>
+                          <option value="GB">United Kingdom</option>
+                          <option value="US">United States</option>
+                          <option value="CA">Canada</option>
+                          <option value="AU">Australia</option>
+                          <option value="JP">Japan</option>
+                          <option value="KR">South Korea</option>
+                          <option value="CN">China</option>
+                          <option value="IN">India</option>
+                          <option value="BR">Brazil</option>
+                          <option value="AR">Argentina</option>
+                          <option value="EG">Egypt</option>
+                          <option value="MA">Morocco</option>
+                          <option value="DZ">Algeria</option>
+                          <option value="AE">UAE</option>
+                          <option value="SA">Saudi Arabia</option>
+                          <option value="OTHER">Other</option>
+                        </select>
+                        <div class="invalid-feedback">Please select your nationality.</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Password -->
+                  <div class="mb-3">
+                    <label for="password" class="form-label">Password *</label>
+                    <div class="input__group">
+                      <i class="input__icon ri-lock-line"></i>
+                      <input type="password" class="form-control" id="password" name="password" required minlength="8">
+                      <div class="invalid-feedback">Password must be at least 8 characters long.</div>
+                    </div>
+                    <small class="text-muted">Password must contain at least 8 characters with uppercase, lowercase, and numbers.</small>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="confirmPassword" class="form-label">Confirm Password *</label>
+                    <div class="input__group">
+                      <i class="input__icon ri-lock-line"></i>
+                      <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
+                      <div class="invalid-feedback">Passwords do not match.</div>
+                    </div>
+                  </div>
+
+                  <!-- Preferences -->
+                  <div class="mb-4">
+                    <h6 class="fw-bold mb-3">Travel Preferences</h6>
+                    <div class="row">
+                      <div class="col-md-6 mb-2">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="emailNotifications" name="preferences" value="email">
+                          <label class="form-check-label" for="emailNotifications">
+                            Email notifications for deals
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-md-6 mb-2">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="smsNotifications" name="preferences" value="sms">
+                          <label class="form-check-label" for="smsNotifications">
+                            SMS notifications
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-md-6 mb-2">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="loyaltyProgram" name="preferences" value="loyalty">
+                          <label class="form-check-label" for="loyaltyProgram">
+                            Join SayadiMiles loyalty program
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-md-6 mb-2">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="newsletter" name="preferences" value="newsletter">
+                          <label class="form-check-label" for="newsletter">
+                            Travel newsletter subscription
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Terms and Conditions -->
+                  <div class="mb-4">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="termsAccepted" name="termsAccepted" required>
+                      <label class="form-check-label" for="termsAccepted">
+                        I agree to the <a href="#" class="text-primary">Terms and Conditions</a> and <a href="#" class="text-primary">Privacy Policy</a> *
+                      </label>
+                      <div class="invalid-feedback">You must agree to the terms and conditions.</div>
+                    </div>
+                  </div>
+
+                  <!-- Submit Button -->
+                  <div class="d-grid mb-3">
+                    <button type="submit" class="btn btn-primary btn-lg">
+                      <i class="ri-user-add-line me-2"></i>Create Account
+                    </button>
+                  </div>
+
+                  <!-- Login Link -->
+                  <div class="text-center">
+                    <p class="mb-0">Already have an account? <a href="Login.html" class="text-primary fw-bold">Sign In</a></p>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../js/script.js"></script>
+    
+    <script>
+      // Sign up form validation and submission
+      document.getElementById('signupForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const form = this;
+        const password = document.getElementById('password').value;
+        const confirmPassword = document.getElementById('confirmPassword').value;
+        
+        // Password validation
+        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{8,}$/;
+        if (!passwordRegex.test(password)) {
+          document.getElementById('password').setCustomValidity('Password must contain at least 8 characters with uppercase, lowercase, and numbers.');
+        } else {
+          document.getElementById('password').setCustomValidity('');
+        }
+        
+        // Confirm password validation
+        if (password !== confirmPassword) {
+          document.getElementById('confirmPassword').setCustomValidity('Passwords do not match.');
+        } else {
+          document.getElementById('confirmPassword').setCustomValidity('');
+        }
+        
+        // Bootstrap validation
+        if (form.checkValidity()) {
+          // Collect form data
+          const formData = new FormData(form);
+          const userData = {};
+          
+          for (let [key, value] of formData.entries()) {
+            if (key === 'preferences') {
+              if (!userData.preferences) userData.preferences = [];
+              userData.preferences.push(value);
+            } else {
+              userData[key] = value;
+            }
+          }
+          
+          console.log('User registration data:', userData);
+          
+          // Simulate account creation
+          alert('Account created successfully! Welcome to SayadiAirways family. You can now log in with your credentials.');
+          
+          // Redirect to login page
+          window.location.href = 'Login.html';
+        }
+        
+        form.classList.add('was-validated');
+      });
+      
+      // Real-time password confirmation validation
+      document.getElementById('confirmPassword').addEventListener('input', function() {
+        const password = document.getElementById('password').value;
+        const confirmPassword = this.value;
+        
+        if (password !== confirmPassword) {
+          this.setCustomValidity('Passwords do not match.');
+        } else {
+          this.setCustomValidity('');
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css?v=1.2" />
+    <title>SayadiAirways - All Extras</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="Home.html">
+          <span class="nav__brand ms-2">SayadiAirways</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="text-white"><i class="ri-menu-3-line"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Home.html"><i class="ri-home-line"></i> Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Book-Complete.html"><i class="ri-plane-line"></i> Book</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Explore.html"><i class="ri-map-pin-line"></i> Explore</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Experience.html"><i class="ri-gift-line"></i> Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Contact.html"><i class="ri-phone-line"></i> Contact</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="ri-briefcase-line"></i> Manage
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Manage-New.html"><i class="ri-search-line"></i> Find Booking</a></li>
+                <li><a class="dropdown-item" href="ModifyBooking-Complete.html"><i class="ri-edit-box-line"></i> Modify Booking</a></li>
+                <li><a class="dropdown-item" href="CancelBooking-Complete.html"><i class="ri-close-circle-line"></i> Cancel Booking</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="CheckIn-Complete.html"><i class="ri-calendar-check-line"></i> Check-In</a></li>
+                <li><a class="dropdown-item" href="FlightStatus.html"><i class="ri-flight-takeoff-line"></i> Flight Status</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="ri-add-circle-line"></i> Extras
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item active" href="Extras.html"><i class="ri-service-line"></i> All Extras</a></li>
+                <li><a class="dropdown-item" href="ExtraBaggage.html"><i class="ri-luggage-cart-line"></i> Extra Baggage</a></li>
+                <li><a class="dropdown-item" href="CarRental-Complete.html"><i class="ri-car-line"></i> Car Rental</a></li>
+                <li><a class="dropdown-item" href="HotelBooking-Complete.html"><i class="ri-hotel-line"></i> Hotel</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="TravelInsurance-Complete.html"><i class="ri-shield-line"></i> Travel Insurance</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Login.html"><i class="ri-user-line"></i> Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="section__container header__container" style="min-height: 60vh; background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);">
+      <div class="header__content text-center">
+        <h1><i class="ri-service-line me-3"></i>Travel Extras & Services</h1>
+        <p class="lead">Enhance your journey with our premium services and add-ons</p>
+      </div>
+    </section>
+
+    <!-- Service Categories -->
+    <section class="section__container" style="margin-top: -50px;">
+      <div class="container">
+        <div class="booking__container mb-5">
+          <h2 class="section__header text-center mb-5">Popular Travel Services</h2>
+          <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+              <div class="service-category-card">
+                <div class="service-image">
+                  <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Flight Services" />
+                </div>
+                <div class="service-content">
+                  <h4><i class="ri-plane-line me-2"></i>Flight Services</h4>
+                  <p>Seat selection, meals, WiFi, and priority boarding</p>
+                  <div class="service-price">From 15 DT</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="service-category-card">
+                <div class="service-image">
+                  <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Ground Services" />
+                </div>
+                <div class="service-content">
+                  <h4><i class="ri-car-line me-2"></i>Ground Services</h4>
+                  <p>Car rental and hotel booking with exclusive rates</p>
+                  <div class="service-price">From 85 DT</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="service-category-card">
+                <div class="service-image">
+                  <img src="https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Protection Services" />
+                </div>
+                <div class="service-content">
+                  <h4><i class="ri-shield-check-line me-2"></i>Protection</h4>
+                  <p>Travel insurance and baggage protection</p>
+                  <div class="service-price">From 45 DT</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- All Extras -->
+    <section class="section__container">
+      <div class="container">
+        <h2 class="section__header text-center mb-5">All Available Services</h2>
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="ri-user-line"></i>
+              </div>
+              <div class="service-info">
+                <h4>Seat Selection</h4>
+                <p>Choose your preferred seat for maximum comfort during your flight</p>
+                <div class="service-features">
+                  <span><i class="ri-check-line"></i> Window & aisle seats</span>
+                  <span><i class="ri-check-line"></i> Extra legroom options</span>
+                  <span><i class="ri-check-line"></i> Family seating</span>
+                </div>
+                <div class="service-pricing">
+                  <span class="price">From 25 DT</span>
+                  <a href="Book-Complete.html" class="btn btn-primary">Select Seat</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="ri-restaurant-line"></i>
+              </div>
+              <div class="service-info">
+                <h4>Special Meals</h4>
+                <p>Pre-order your meal preference including dietary and cultural options</p>
+                <div class="service-features">
+                  <span><i class="ri-check-line"></i> Vegetarian & vegan</span>
+                  <span><i class="ri-check-line"></i> Halal & kosher</span>
+                  <span><i class="ri-check-line"></i> Gluten-free options</span>
+                </div>
+                <div class="service-pricing">
+                  <span class="price">From 35 DT</span>
+                  <a href="Book-Complete.html" class="btn btn-primary">Order Meal</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card popular">
+              <div class="popular-badge">Popular</div>
+              <div class="service-icon">
+                <i class="ri-luggage-cart-line"></i>
+              </div>
+              <div class="service-info">
+                <h4>Extra Baggage</h4>
+                <p>Add additional baggage allowance for your journey</p>
+                <div class="service-features">
+                  <span><i class="ri-check-line"></i> Save up to 30%</span>
+                  <span><i class="ri-check-line"></i> Multiple weight options</span>
+                  <span><i class="ri-check-line"></i> Return journey included</span>
+                </div>
+                <div class="service-pricing">
+                  <span class="price">From 45 DT</span>
+                  <a href="ExtraBaggage.html" class="btn btn-primary">Add Baggage</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="ri-wifi-line"></i>
+              </div>
+              <div class="service-info">
+                <h4>In-Flight WiFi</h4>
+                <p>Stay connected during your flight with high-speed internet access</p>
+                <div class="service-features">
+                  <span><i class="ri-check-line"></i> High-speed connection</span>
+                  <span><i class="ri-check-line"></i> Multiple device support</span>
+                  <span><i class="ri-check-line"></i> Streaming available</span>
+                </div>
+                <div class="service-pricing">
+                  <span class="price">From 15 DT</span>
+                  <a href="Book-Complete.html" class="btn btn-primary">Add WiFi</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="ri-shield-check-line"></i>
+              </div>
+              <div class="service-info">
+                <h4>Travel Insurance</h4>
+                <p>Comprehensive travel protection for peace of mind</p>
+                <div class="service-features">
+                  <span><i class="ri-check-line"></i> Medical coverage</span>
+                  <span><i class="ri-check-line"></i> Trip cancellation</span>
+                  <span><i class="ri-check-line"></i> 24/7 assistance</span>
+                </div>
+                <div class="service-pricing">
+                  <span class="price">From 55 DT</span>
+                  <a href="TravelInsurance-Complete.html" class="btn btn-primary">Get Protected</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="ri-car-line"></i>
+              </div>
+              <div class="service-info">
+                <h4>Car Rental</h4>
+                <p>Book a rental car for your destination with special airline rates</p>
+                <div class="service-features">
+                  <span><i class="ri-check-line"></i> Exclusive discounts</span>
+                  <span><i class="ri-check-line"></i> Electric cars available</span>
+                  <span><i class="ri-check-line"></i> Airport pickup</span>
+                </div>
+                <div class="service-pricing">
+                  <span class="price">From 85 DT/day</span>
+                  <a href="CarRental-Complete.html" class="btn btn-primary">Book Car</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="ri-hotel-line"></i>
+              </div>
+              <div class="service-info">
+                <h4>Hotel Booking</h4>
+                <p>Find and book hotels at your destination with exclusive discounts</p>
+                <div class="service-features">
+                  <span><i class="ri-check-line"></i> Best price guarantee</span>
+                  <span><i class="ri-check-line"></i> Instant confirmation</span>
+                  <span><i class="ri-check-line"></i> Free cancellation</span>
+                </div>
+                <div class="service-pricing">
+                  <span class="price">From 120 DT/night</span>
+                  <a href="HotelBooking-Complete.html" class="btn btn-primary">Book Hotel</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="ri-vip-crown-line"></i>
+              </div>
+              <div class="service-info">
+                <h4>Priority Services</h4>
+                <p>Skip the lines and enjoy priority boarding and check-in</p>
+                <div class="service-features">
+                  <span><i class="ri-check-line"></i> Priority boarding</span>
+                  <span><i class="ri-check-line"></i> Fast-track security</span>
+                  <span><i class="ri-check-line"></i> Lounge access</span>
+                </div>
+                <div class="service-pricing">
+                  <span class="price">From 20 DT</span>
+                  <a href="Book-Complete.html" class="btn btn-primary">Add Priority</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="ri-wheelchair-line"></i>
+              </div>
+              <div class="service-info">
+                <h4>Special Assistance</h4>
+                <p>Request wheelchair assistance or other special services</p>
+                <div class="service-features">
+                  <span><i class="ri-check-line"></i> Wheelchair service</span>
+                  <span><i class="ri-check-line"></i> Medical assistance</span>
+                  <span><i class="ri-check-line"></i> Unaccompanied minors</span>
+                </div>
+                <div class="service-pricing">
+                  <span class="price">Free Service</span>
+                  <a href="Contact.html" class="btn btn-primary">Request Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="pro-footer">
+      <div class="pro-footer__main">
+        <div class="pro-footer__grid">
+          <div class="pro-footer__brand">
+            <div class="pro-footer__logo">
+              <span>SayadiAirways</span>
+            </div>
+            <p>Your trusted airline partner since 2020. We connect Tunisia to the world with comfort, safety, and unmatched service excellence.</p>
+            <div class="pro-footer__social">
+              <a href="https://www.facebook.com/fedi1923"><i class="ri-facebook-fill"></i></a>
+              <a href="https://twitter.com/FediSayadi" aria-label="Twitter">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M22 5.92c-.64.28-1.32.47-2.04.56.73-.44 1.28-1.13 1.54-1.95-.68.4-1.44.68-2.25.83a3.6 3.6 0 0 0-6.13 3.28A10.2 10.2 0 0 1 3.16 4.6a3.6 3.6 0 0 0 1.12 4.8c-.58-.02-1.12-.18-1.6-.45v.05a3.6 3.6 0 0 0 2.88 3.53c-.27.07-.56.09-.86.03a3.6 3.6 0 0 0 3.36 2.5A7.23 7.23 0 0 1 2 18.58 10.19 10.19 0 0 0 7.37 20c8.84 0 13.67-7.32 13.67-13.66v-.62A9.6 9.6 0 0 0 22 5.92z"/>
+                </svg>
+              </a>
+              <a href="https://www.instagram.com/sayadi.fedi/"><i class="ri-instagram-line"></i></a>
+              <a href="https://www.linkedin.com/in/fedi-sayadi-ba705b287/"><i class="ri-linkedin-fill"></i></a>
+              <a href="https://www.youtube.com/@fedisayadi7627"><i class="ri-youtube-fill"></i></a>
+            </div>
+          </div>
+          
+          <div class="pro-footer__col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="Book-Complete.html"><i class="ri-plane-line"></i> Book a Flight</a></li>
+              <li><a href="CheckIn-Complete.html"><i class="ri-checkbox-circle-line"></i> Online Check-In</a></li>
+              <li><a href="FlightStatus.html"><i class="ri-time-line"></i> Flight Status</a></li>
+              <li><a href="Explore.html"><i class="ri-map-pin-line"></i> Destinations</a></li>
+              <li><a href="Experience.html"><i class="ri-star-line"></i> Travel Experience</a></li>
+            </ul>
+          </div>
+          
+          <div class="pro-footer__col">
+            <h4>Travel Services</h4>
+            <ul>
+              <li><a href="ExtraBaggage.html"><i class="ri-luggage-cart-line"></i> Extra Baggage</a></li>
+              <li><a href="CarRental-Complete.html"><i class="ri-car-line"></i> Car Rental</a></li>
+              <li><a href="HotelBooking-Complete.html"><i class="ri-hotel-line"></i> Hotel Booking</a></li>
+              <li><a href="TravelInsurance-Complete.html"><i class="ri-shield-check-line"></i> Travel Insurance</a></li>
+              <li><a href="ModifyBooking-Complete.html"><i class="ri-edit-line"></i> Manage Booking</a></li>
+            </ul>
+          </div>
+          
+          <div class="pro-footer__col">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="Contact.html"><i class="ri-customer-service-line"></i> Contact Us</a></li>
+              <li><a href="#"><i class="ri-question-line"></i> FAQs</a></li>
+              <li><a href="#"><i class="ri-file-text-line"></i> Terms & Conditions</a></li>
+              <li><a href="#"><i class="ri-shield-line"></i> Privacy Policy</a></li>
+              <li><a href="#"><i class="ri-feedback-line"></i> Feedback</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="pro-footer__bottom">
+        <div class="pro-footer__bottom-content">
+          <div class="pro-footer__copyright">
+            &copy; 2025 SayadiAirways. All rights reserved.
+          </div>
+          <div class="pro-footer__payments">
+            <span>We accept:</span>
+            <div class="pro-footer__payment-icons">
+              <i class="ri-visa-line"></i>
+              <i class="ri-mastercard-line"></i>
+              <i class="ri-paypal-line"></i>
+              <i class="ri-bank-card-line"></i>
+            </div>
+          </div>
+          <div class="pro-footer__legal">
+            <a href="#">Cookie Policy</a>
+            <a href="#">Accessibility</a>
+            <a href="#">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+  </body>
+</html>

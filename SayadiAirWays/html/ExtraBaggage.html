@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css?v=1.2" />
+    <title>SayadiAirways - Extra Baggage</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="Home.html">
+          <span class="nav__brand ms-2">SayadiAirways</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="text-white"><i class="ri-menu-3-line"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Home.html"><i class="ri-home-line"></i> Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Book-Complete.html"><i class="ri-plane-line"></i> Book</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Explore.html"><i class="ri-map-pin-line"></i> Explore</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Experience.html"><i class="ri-gift-line"></i> Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Contact.html"><i class="ri-phone-line"></i> Contact</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="ri-briefcase-line"></i> Manage
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Manage-New.html"><i class="ri-search-line"></i> Find Booking</a></li>
+                <li><a class="dropdown-item" href="ModifyBooking-Complete.html"><i class="ri-edit-box-line"></i> Modify Booking</a></li>
+                <li><a class="dropdown-item" href="CancelBooking-Complete.html"><i class="ri-close-circle-line"></i> Cancel Booking</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="CheckIn-Complete.html"><i class="ri-calendar-check-line"></i> Check-In</a></li>
+                <li><a class="dropdown-item" href="FlightStatus.html"><i class="ri-flight-takeoff-line"></i> Flight Status</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="ri-add-circle-line"></i> Extras
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Extras.html"><i class="ri-service-line"></i> All Extras</a></li>
+                <li><a class="dropdown-item active" href="ExtraBaggage.html"><i class="ri-luggage-cart-line"></i> Extra Baggage</a></li>
+                <li><a class="dropdown-item" href="CarRental-Complete.html"><i class="ri-car-line"></i> Car Rental</a></li>
+                <li><a class="dropdown-item" href="HotelBooking-Complete.html"><i class="ri-hotel-line"></i> Hotel</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="TravelInsurance-Complete.html"><i class="ri-shield-line"></i> Travel Insurance</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Login.html"><i class="ri-user-line"></i> Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="section__container header__container" style="min-height: 50vh; background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);">
+      <div class="header__content text-center">
+        <h1><i class="ri-luggage-cart-line me-3"></i>Extra Baggage</h1>
+        <p class="lead">Add more baggage allowance to your booking with special airline rates</p>
+      </div>
+    </section>
+
+    <!-- Extra Baggage Section -->
+    <section class="section__container" style="margin-top: -50px;">
+      <div class="container">
+        <!-- Current Allowance -->
+        <div class="booking__container mb-5">
+          <h3 class="mb-4"><i class="ri-information-line me-2"></i>Current Baggage Allowance</h3>
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="allowance-card economy">
+                <div class="allowance-header">
+                  <i class="ri-briefcase-line"></i>
+                  <h5>Economy Class</h5>
+                </div>
+                <div class="allowance-details">
+                  <div class="allowance-item">
+                    <span class="weight">23kg</span>
+                    <span class="type">Checked Baggage</span>
+                  </div>
+                  <div class="allowance-item">
+                    <span class="weight">8kg</span>
+                    <span class="type">Carry-on</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="allowance-card business">
+                <div class="allowance-header">
+                  <i class="ri-briefcase-2-line"></i>
+                  <h5>Business Class</h5>
+                </div>
+                <div class="allowance-details">
+                  <div class="allowance-item">
+                    <span class="weight">32kg</span>
+                    <span class="type">Checked Baggage</span>
+                  </div>
+                  <div class="allowance-item">
+                    <span class="weight">10kg</span>
+                    <span class="type">Carry-on</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="allowance-card first">
+                <div class="allowance-header">
+                  <i class="ri-briefcase-3-line"></i>
+                  <h5>First Class</h5>
+                </div>
+                <div class="allowance-details">
+                  <div class="allowance-item">
+                    <span class="weight">40kg</span>
+                    <span class="type">Checked Baggage</span>
+                  </div>
+                  <div class="allowance-item">
+                    <span class="weight">12kg</span>
+                    <span class="type">Carry-on</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Add Extra Baggage -->
+        <div class="booking__container">
+          <h3 class="mb-4"><i class="ri-add-circle-line me-2"></i>Add Extra Baggage</h3>
+          <div class="row g-4">
+            <div class="col-lg-4">
+              <div class="baggage-option">
+                <div class="baggage-header">
+                  <div class="baggage-icon">
+                    <i class="ri-luggage-cart-line"></i>
+                  </div>
+                  <h4>+10kg</h4>
+                  <p>Additional checked baggage</p>
+                </div>
+                <div class="baggage-price">
+                  <span class="price">45</span>
+                  <span class="currency">DT</span>
+                </div>
+                <div class="baggage-features">
+                  <ul class="list-unstyled">
+                    <li><i class="ri-check-line"></i> Perfect for short trips</li>
+                    <li><i class="ri-check-line"></i> Save 20% vs airport rates</li>
+                    <li><i class="ri-check-line"></i> Valid for return journey</li>
+                  </ul>
+                </div>
+                <div class="quantity-selector">
+                  <label>Quantity:</label>
+                  <div class="quantity-controls">
+                    <button type="button" onclick="updateQuantity('bag10', -1)">-</button>
+                    <span id="bag10-qty">0</span>
+                    <button type="button" onclick="updateQuantity('bag10', 1)">+</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-lg-4">
+              <div class="baggage-option popular">
+                <div class="popular-badge">Most Popular</div>
+                <div class="baggage-header">
+                  <div class="baggage-icon">
+                    <i class="ri-luggage-cart-line"></i>
+                  </div>
+                  <h4>+20kg</h4>
+                  <p>Additional checked baggage</p>
+                </div>
+                <div class="baggage-price">
+                  <span class="price">80</span>
+                  <span class="currency">DT</span>
+                </div>
+                <div class="baggage-features">
+                  <ul class="list-unstyled">
+                    <li><i class="ri-check-line"></i> Great for longer trips</li>
+                    <li><i class="ri-check-line"></i> Save 25% vs airport rates</li>
+                    <li><i class="ri-check-line"></i> Valid for return journey</li>
+                  </ul>
+                </div>
+                <div class="quantity-selector">
+                  <label>Quantity:</label>
+                  <div class="quantity-controls">
+                    <button type="button" onclick="updateQuantity('bag20', -1)">-</button>
+                    <span id="bag20-qty">0</span>
+                    <button type="button" onclick="updateQuantity('bag20', 1)">+</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-lg-4">
+              <div class="baggage-option">
+                <div class="baggage-header">
+                  <div class="baggage-icon">
+                    <i class="ri-luggage-cart-line"></i>
+                  </div>
+                  <h4>+30kg</h4>
+                  <p>Additional checked baggage</p>
+                </div>
+                <div class="baggage-price">
+                  <span class="price">110</span>
+                  <span class="currency">DT</span>
+                </div>
+                <div class="baggage-features">
+                  <ul class="list-unstyled">
+                    <li><i class="ri-check-line"></i> Perfect for extended stays</li>
+                    <li><i class="ri-check-line"></i> Save 30% vs airport rates</li>
+                    <li><i class="ri-check-line"></i> Valid for return journey</li>
+                  </ul>
+                </div>
+                <div class="quantity-selector">
+                  <label>Quantity:</label>
+                  <div class="quantity-controls">
+                    <button type="button" onclick="updateQuantity('bag30', -1)">-</button>
+                    <span id="bag30-qty">0</span>
+                    <button type="button" onclick="updateQuantity('bag30', 1)">+</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Booking Summary -->
+          <div class="baggage-summary" id="baggageSummary" style="display: none;">
+            <h4><i class="ri-file-text-line me-2"></i>Baggage Summary</h4>
+            <div class="summary-content">
+              <div id="summaryItems"></div>
+              <div class="summary-total">
+                <span>Total: </span>
+                <span id="totalPrice">0 DT</span>
+              </div>
+              <button class="btn btn-primary btn-lg w-100 mt-3" onclick="proceedToPayment()">
+                <i class="ri-secure-payment-line me-2"></i>Proceed to Payment
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Baggage Tips -->
+    <section class="section__container" style="background: var(--light-bg);">
+      <div class="container">
+        <h2 class="section__header text-center mb-5">Baggage Tips & Guidelines</h2>
+        <div class="row g-4">
+          <div class="col-lg-3 col-md-6">
+            <div class="tip-card">
+              <div class="tip-icon">
+                <i class="ri-scales-line"></i>
+              </div>
+              <h5>Weight Limits</h5>
+              <p>Each piece must not exceed 32kg for safety reasons</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="tip-card">
+              <div class="tip-icon">
+                <i class="ri-ruler-line"></i>
+              </div>
+              <h5>Size Restrictions</h5>
+              <p>Maximum dimensions: 158cm (length + width + height)</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="tip-card">
+              <div class="tip-icon">
+                <i class="ri-money-dollar-circle-line"></i>
+              </div>
+              <h5>Save Money</h5>
+              <p>Pre-purchase online and save up to 30% vs airport rates</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="tip-card">
+              <div class="tip-icon">
+                <i class="ri-shield-check-line"></i>
+              </div>
+              <h5>Protection</h5>
+              <p>Consider travel insurance for valuable items</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="pro-footer">
+      <div class="pro-footer__main">
+        <div class="pro-footer__grid">
+          <div class="pro-footer__brand">
+            <div class="pro-footer__logo">
+              <span>SayadiAirways</span>
+            </div>
+            <p>Your trusted airline partner since 2020. We connect Tunisia to the world with comfort, safety, and unmatched service excellence.</p>
+            <div class="pro-footer__social">
+              <a href="https://www.facebook.com/fedi1923"><i class="ri-facebook-fill"></i></a>
+              <a href="https://twitter.com/FediSayadi" aria-label="Twitter">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M22 5.92c-.64.28-1.32.47-2.04.56.73-.44 1.28-1.13 1.54-1.95-.68.4-1.44.68-2.25.83a3.6 3.6 0 0 0-6.13 3.28A10.2 10.2 0 0 1 3.16 4.6a3.6 3.6 0 0 0 1.12 4.8c-.58-.02-1.12-.18-1.6-.45v.05a3.6 3.6 0 0 0 2.88 3.53c-.27.07-.56.09-.86.03a3.6 3.6 0 0 0 3.36 2.5A7.23 7.23 0 0 1 2 18.58 10.19 10.19 0 0 0 7.37 20c8.84 0 13.67-7.32 13.67-13.66v-.62A9.6 9.6 0 0 0 22 5.92z"/>
+                </svg>
+              </a>
+              <a href="https://www.instagram.com/sayadi.fedi/"><i class="ri-instagram-line"></i></a>
+              <a href="https://www.linkedin.com/in/fedi-sayadi-ba705b287/"><i class="ri-linkedin-fill"></i></a>
+              <a href="https://www.youtube.com/@fedisayadi7627"><i class="ri-youtube-fill"></i></a>
+            </div>
+          </div>
+          
+          <div class="pro-footer__col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="Book-Complete.html"><i class="ri-plane-line"></i> Book a Flight</a></li>
+              <li><a href="CheckIn-Complete.html"><i class="ri-checkbox-circle-line"></i> Online Check-In</a></li>
+              <li><a href="FlightStatus.html"><i class="ri-time-line"></i> Flight Status</a></li>
+              <li><a href="Explore.html"><i class="ri-map-pin-line"></i> Destinations</a></li>
+              <li><a href="Experience.html"><i class="ri-star-line"></i> Travel Experience</a></li>
+            </ul>
+          </div>
+          
+          <div class="pro-footer__col">
+            <h4>Travel Services</h4>
+            <ul>
+              <li><a href="ExtraBaggage.html"><i class="ri-luggage-cart-line"></i> Extra Baggage</a></li>
+              <li><a href="CarRental-Complete.html"><i class="ri-car-line"></i> Car Rental</a></li>
+              <li><a href="HotelBooking-Complete.html"><i class="ri-hotel-line"></i> Hotel Booking</a></li>
+              <li><a href="TravelInsurance-Complete.html"><i class="ri-shield-check-line"></i> Travel Insurance</a></li>
+              <li><a href="ModifyBooking-Complete.html"><i class="ri-edit-line"></i> Manage Booking</a></li>
+            </ul>
+          </div>
+          
+          <div class="pro-footer__col">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="Contact.html"><i class="ri-customer-service-line"></i> Contact Us</a></li>
+              <li><a href="#"><i class="ri-question-line"></i> FAQs</a></li>
+              <li><a href="#"><i class="ri-file-text-line"></i> Terms & Conditions</a></li>
+              <li><a href="#"><i class="ri-shield-line"></i> Privacy Policy</a></li>
+              <li><a href="#"><i class="ri-feedback-line"></i> Feedback</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="pro-footer__bottom">
+        <div class="pro-footer__bottom-content">
+          <div class="pro-footer__copyright">
+            &copy; 2025 SayadiAirways. All rights reserved.
+          </div>
+          <div class="pro-footer__payments">
+            <span>We accept:</span>
+            <div class="pro-footer__payment-icons">
+              <i class="ri-visa-line"></i>
+              <i class="ri-mastercard-line"></i>
+              <i class="ri-paypal-line"></i>
+              <i class="ri-bank-card-line"></i>
+            </div>
+          </div>
+          <div class="pro-footer__legal">
+            <a href="#">Cookie Policy</a>
+            <a href="#">Accessibility</a>
+            <a href="#">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+    
+    <script>
+      const baggageOptions = {
+        bag10: { weight: 10, price: 45, qty: 0 },
+        bag20: { weight: 20, price: 80, qty: 0 },
+        bag30: { weight: 30, price: 110, qty: 0 }
+      };
+
+      function updateQuantity(bagType, change) {
+        const currentQty = baggageOptions[bagType].qty;
+        const newQty = Math.max(0, Math.min(5, currentQty + change)); // Max 5 bags
+        
+        baggageOptions[bagType].qty = newQty;
+        document.getElementById(`${bagType}-qty`).textContent = newQty;
+        
+        updateSummary();
+      }
+
+      function updateSummary() {
+        const summarySection = document.getElementById('baggageSummary');
+        const summaryItems = document.getElementById('summaryItems');
+        const totalPriceEl = document.getElementById('totalPrice');
+        
+        let totalPrice = 0;
+        let totalWeight = 0;
+        let itemsHTML = '';
+        
+        Object.keys(baggageOptions).forEach(key => {
+          const option = baggageOptions[key];
+          if (option.qty > 0) {
+            const itemTotal = option.price * option.qty;
+            totalPrice += itemTotal;
+            totalWeight += option.weight * option.qty;
+            itemsHTML += `
+              <div class="summary-item">
+                <span>${option.qty}x ${option.weight}kg Baggage</span>
+                <span>${itemTotal} DT</span>
+              </div>
+            `;
+          }
+        });
+        
+        if (totalPrice > 0) {
+          summarySection.style.display = 'block';
+          summaryItems.innerHTML = itemsHTML + `
+            <div class="summary-item total-weight">
+              <span>Total Extra Weight</span>
+              <span>${totalWeight}kg</span>
+            </div>
+          `;
+          totalPriceEl.textContent = totalPrice + ' DT';
+          summarySection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        } else {
+          summarySection.style.display = 'none';
+        }
+      }
+
+      function proceedToPayment() {
+        const selectedBaggage = [];
+        let totalPrice = 0;
+        
+        Object.keys(baggageOptions).forEach(key => {
+          const option = baggageOptions[key];
+          if (option.qty > 0) {
+            selectedBaggage.push({
+              weight: option.weight,
+              quantity: option.qty,
+              price: option.price,
+              total: option.price * option.qty
+            });
+            totalPrice += option.price * option.qty;
+          }
+        });
+        
+        if (selectedBaggage.length === 0) {
+          alert('Please select at least one baggage option');
+          return;
+        }
+        
+        // Store in localStorage for payment page
+        const bookingData = {
+          service: 'Extra Baggage',
+          items: selectedBaggage,
+          totalPrice: totalPrice
+        };
+        localStorage.setItem('baggageBooking', JSON.stringify(bookingData));
+        
+        // Show confirmation
+        alert(`Proceeding to payment for extra baggage (${totalPrice} DT)`);
+        
+        // Here you would redirect to payment page
+        // window.location.href = 'payment.html';
+      }
+
+      function toggleExtra(button) {
+        const extraItem = button.closest('.extra-item');
+        extraItem.classList.toggle('selected');
+        
+        if (extraItem.classList.contains('selected')) {
+          button.textContent = 'Selected ✓';
+          button.style.background = 'var(--accent-color)';
+        } else {
+          button.textContent = 'Add to Booking';
+          button.style.background = '';
+        }
+      }
+    </script>
+  </body>
+</html>

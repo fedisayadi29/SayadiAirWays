@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css?v=1.2" />
+    <title>SayadiAirways - Cancel Booking</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="Home.html">
+          <span class="nav__brand ms-2">SayadiAirways</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="text-white"><i class="ri-menu-3-line"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Home.html"><i class="ri-home-line"></i> Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Book-Complete.html"><i class="ri-plane-line"></i> Book</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Explore.html"><i class="ri-map-pin-line"></i> Explore</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Experience.html"><i class="ri-gift-line"></i> Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Contact.html"><i class="ri-phone-line"></i> Contact</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="ri-briefcase-line"></i> Manage
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Manage-New.html"><i class="ri-search-line"></i> Find Booking</a></li>
+                <li><a class="dropdown-item" href="ModifyBooking-Complete.html"><i class="ri-edit-box-line"></i> Modify Booking</a></li>
+                <li><a class="dropdown-item active" href="CancelBooking-Complete.html"><i class="ri-close-circle-line"></i> Cancel Booking</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="CheckIn-Complete.html"><i class="ri-calendar-check-line"></i> Check-In</a></li>
+                <li><a class="dropdown-item" href="FlightStatus.html"><i class="ri-flight-takeoff-line"></i> Flight Status</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="ri-add-circle-line"></i> Extras
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Extras.html"><i class="ri-service-line"></i> All Extras</a></li>
+                <li><a class="dropdown-item" href="ExtraBaggage.html"><i class="ri-luggage-cart-line"></i> Extra Baggage</a></li>
+                <li><a class="dropdown-item" href="CarRental-Complete.html"><i class="ri-car-line"></i> Car Rental</a></li>
+                <li><a class="dropdown-item" href="HotelBooking-Complete.html"><i class="ri-hotel-line"></i> Hotel</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="TravelInsurance-Complete.html"><i class="ri-shield-line"></i> Travel Insurance</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Login.html"><i class="ri-user-line"></i> Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Cancellation Process -->
+    <section class="booking-process">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h1><i class="ri-close-circle-line me-3"></i>Cancel Your Booking</h1>
+          <p class="lead">We're sorry to see you go. Let us help you cancel your reservation.</p>
+        </div>
+        
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="step-number active" id="stepNum1">1</div>
+            <div class="step-title">Find Booking</div>
+            <div class="step-description">Enter booking details</div>
+          </div>
+          <div class="step-connector" id="connector1"></div>
+          <div class="process-step">
+            <div class="step-number" id="stepNum2">2</div>
+            <div class="step-title">Review Details</div>
+            <div class="step-description">Confirm booking information</div>
+          </div>
+          <div class="step-connector" id="connector2"></div>
+          <div class="process-step">
+            <div class="step-number" id="stepNum3">3</div>
+            <div class="step-title">Cancellation Policy</div>
+            <div class="step-description">Review terms & fees</div>
+          </div>
+          <div class="step-connector" id="connector3"></div>
+          <div class="process-step">
+            <div class="step-number" id="stepNum4">4</div>
+            <div class="step-title">Confirm Cancellation</div>
+            <div class="step-description">Complete cancellation</div>
+          </div>
+        </div>
+
+        <!-- Step 1: Find Booking -->
+        <div class="step-content active" id="step1">
+          <div class="row">
+            <div class="col-lg-6 mx-auto">
+              <div class="booking__container">
+                <h2 class="text-center mb-4"><i class="ri-search-line me-2"></i>Find Your Booking</h2>
+                <p class="text-center text-muted mb-4">Enter your booking reference and last name to locate your reservation</p>
+                
+                <div class="alert alert-warning">
+                  <i class="ri-alert-line me-2"></i>
+                  <strong>Important:</strong> Cancellation fees may apply depending on your fare type and timing. Free cancellation is available within 24 hours of booking.
+                </div>
+                
+                <form id="findBookingForm">
+                  <div class="form-group">
+                    <label class="form-label">Booking Reference *</label>
+                    <div class="input__group">
+                      <i class="ri-bookmark-line input__icon"></i>
+                      <input type="text" class="form-control" id="bookingRefCancel" placeholder="e.g., SA123456" required>
+                    </div>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label class="form-label">Last Name *</label>
+                    <div class="input__group">
+                      <i class="ri-user-line input__icon"></i>
+                      <input type="text" class="form-control" id="lastNameCancel" placeholder="As shown on booking" required>
+                    </div>
+                  </div>
+                  
+                  <button type="button" class="btn btn-primary btn-lg w-100" onclick="nextStep(2)">
+                    <i class="ri-search-line me-2"></i>Find My Booking
+                  </button>
+                </form>
+                
+                <div class="text-center mt-4">
+                  <p class="text-muted">Need help finding your booking reference?</p>
+                  <a href="Contact.html" class="text-primary">Contact our support team</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2: Review Booking Details -->
+        <div class="step-content" id="step2">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="text-center mb-4"><i class="ri-file-list-line me-2"></i>Review Booking Details</h2>
+              
+              <div class="booking__container">
+                <div class="card border-0 shadow-sm mb-4">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-md-8">
+                        <h5 class="text-primary mb-3">Flight SA1234 - Economy Class</h5>
+                        <div class="row">
+                          <div class="col-6">
+                            <strong>From:</strong> Tunis (TUN)<br>
+                            <small class="text-muted">Tunis-Carthage Airport</small><br>
+                            <strong>Date:</strong> March 15, 2024<br>
+                            <strong>Time:</strong> 14:30
+                          </div>
+                          <div class="col-6">
+                            <strong>To:</strong> Paris (CDG)<br>
+                            <small class="text-muted">Charles de Gaulle Airport</small><br>
+                            <strong>Date:</strong> March 15, 2024<br>
+                            <strong>Time:</strong> 17:45
+                          </div>
+                        </div>
+                        <hr>
+                        <strong>Passenger:</strong> John Doe<br>
+                        <strong>Seat:</strong> 12A (Window)<br>
+                        <strong>Booking Date:</strong> February 10, 2024
+                      </div>
+                      <div class="col-md-4 text-end">
+                        <div class="badge bg-success mb-2">Confirmed</div><br>
+                        <strong>Total Paid:</strong> 750DT<br>
+                        <small class="text-muted">Booking Ref: SA123456</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="text-center">
+                  <button class="btn btn-outline-secondary me-3" onclick="nextStep(1)">
+                    <i class="ri-arrow-left-line me-2"></i>Back
+                  </button>
+                  <button class="btn btn-primary btn-lg px-5" onclick="nextStep(3)">
+                    <i class="ri-arrow-right-line me-2"></i>Continue to Cancellation Policy
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3: Cancellation Policy -->
+        <div class="step-content" id="step3">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="text-center mb-4"><i class="ri-file-text-line me-2"></i>Cancellation Policy & Fees</h2>
+              
+              <div class="booking__container">
+                <div class="alert alert-info">
+                  <i class="ri-information-line me-2"></i>
+                  <strong>Your Fare Type:</strong> Economy Flex - Cancellation allowed with fees
+                </div>
+                
+                <div class="row g-4 mb-4">
+                  <div class="col-md-6">
+                    <div class="card border-0 bg-light h-100">
+                      <div class="card-body">
+                        <h5><i class="ri-money-dollar-circle-line me-2 text-success"></i>Refund Calculation</h5>
+                        <table class="table table-sm">
+                          <tr>
+                            <td>Original Payment:</td>
+                            <td class="text-end">750DT</td>
+                          </tr>
+                          <tr>
+                            <td>Cancellation Fee:</td>
+                            <td class="text-end text-danger">-150DT</td>
+                          </tr>
+                          <tr>
+                            <td>Processing Fee:</td>
+                            <td class="text-end text-danger">-25DT</td>
+                          </tr>
+                          <tr class="fw-bold border-top">
+                            <td>Refund Amount:</td>
+                            <td class="text-end text-success">575DT</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-md-6">
+                    <div class="card border-0 bg-light h-100">
+                      <div class="card-body">
+                        <h5><i class="ri-time-line me-2 text-primary"></i>Refund Timeline</h5>
+                        <ul class="list-unstyled">
+                          <li class="mb-2"><i class="ri-check-line text-success me-2"></i>Credit Card: 5-7 business days</li>
+                          <li class="mb-2"><i class="ri-check-line text-success me-2"></i>Bank Transfer: 7-10 business days</li>
+                          <li class="mb-2"><i class="ri-check-line text-success me-2"></i>PayPal: 3-5 business days</li>
+                          <li class="mb-2"><i class="ri-information-line text-info me-2"></i>Refund to original payment method</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="alert alert-warning">
+                  <h6><i class="ri-alert-line me-2"></i>Important Terms:</h6>
+                  <ul class="mb-0">
+                    <li>Cancellation must be completed at least 2 hours before departure</li>
+                    <li>No-show bookings are not eligible for refunds</li>
+                    <li>Refund processing begins after cancellation confirmation</li>
+                    <li>Additional fees may apply for bookings made through third parties</li>
+                  </ul>
+                </div>
+                
+                <div class="text-center">
+                  <button class="btn btn-outline-secondary me-3" onclick="nextStep(2)">
+                    <i class="ri-arrow-left-line me-2"></i>Back
+                  </button>
+                  <button class="btn btn-danger btn-lg px-5" onclick="nextStep(4)">
+                    <i class="ri-check-line me-2"></i>I Understand, Continue
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 4: Confirm Cancellation -->
+        <div class="step-content" id="step4">
+          <div class="row">
+            <div class="col-lg-6 mx-auto">
+              <h2 class="text-center mb-4"><i class="ri-close-circle-line me-2"></i>Confirm Cancellation</h2>
+              
+              <div class="booking__container">
+                <div class="alert alert-danger">
+                  <i class="ri-error-warning-line me-2"></i>
+                  <strong>Final Step:</strong> This action cannot be undone. Please confirm you want to cancel your booking.
+                </div>
+                
+                <div class="card border-danger mb-4">
+                  <div class="card-body text-center">
+                    <h5 class="text-danger">Cancellation Summary</h5>
+                    <p><strong>Flight:</strong> SA1234 - Tunis to Paris</p>
+                    <p><strong>Date:</strong> March 15, 2024</p>
+                    <p><strong>Refund Amount:</strong> <span class="text-success fw-bold">575DT</span></p>
+                  </div>
+                </div>
+                
+                <form id="cancellationForm">
+                  <div class="form-group">
+                    <label class="form-label">Reason for Cancellation (Optional)</label>
+                    <select class="form-control" id="cancellationReason">
+                      <option value="">Select a reason</option>
+                      <option value="change_plans">Change of plans</option>
+                      <option value="emergency">Emergency</option>
+                      <option value="illness">Illness</option>
+                      <option value="work">Work commitment</option>
+                      <option value="weather">Weather concerns</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                  
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="confirmCancellation" required>
+                      <label class="form-check-label" for="confirmCancellation">
+                        I confirm that I want to cancel this booking and understand the cancellation policy
+                      </label>
+                    </div>
+                  </div>
+                  
+                  <div class="text-center">
+                    <button type="button" class="btn btn-outline-secondary me-3" onclick="nextStep(3)">
+                      <i class="ri-arrow-left-line me-2"></i>Back
+                    </button>
+                    <button type="button" class="btn btn-danger btn-lg px-5" onclick="confirmCancellation()">
+                      <i class="ri-close-circle-line me-2"></i>Cancel My Booking
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 5: Cancellation Confirmation -->
+        <div class="step-content" id="step5">
+          <div class="row">
+            <div class="col-lg-6 mx-auto">
+              <div class="booking__container text-center">
+                <div class="mb-4">
+                  <i class="ri-check-double-line" style="font-size: 4rem; color: var(--accent-color);"></i>
+                </div>
+                <h2 class="text-success mb-4">Booking Cancelled Successfully</h2>
+                
+                <div class="alert alert-success">
+                  <h5>Cancellation Details:</h5>
+                  <p><strong>Booking Reference:</strong> SA123456</p>
+                  <p><strong>Cancellation Date:</strong> <span id="cancellationDate"></span></p>
+                  <p><strong>Refund Amount:</strong> 575DT</p>
+                  <p><strong>Expected Refund:</strong> 5-7 business days</p>
+                </div>
+                
+                <p class="text-muted mb-4">
+                  A cancellation confirmation email has been sent to your registered email address. 
+                  Your refund will be processed to the original payment method within the specified timeframe.
+                </p>
+                
+                <div class="d-grid gap-2">
+                  <a href="Home.html" class="btn btn-primary btn-lg">
+                    <i class="ri-home-line me-2"></i>Return to Home
+                  </a>
+                  <a href="Book-Complete.html" class="btn btn-outline-primary">
+                    <i class="ri-plane-line me-2"></i>Book Another Flight
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+                    <div class="card mb-3">
+                      <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                          <h5 class="mb-0">Tunis (TUN) → Paris (CDG)</h5>
+                          <span class="badge bg-primary">Economy</span>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-6">
+                            <p class="mb-1"><strong>Departure:</strong></p>
+                            <p class="text-muted">March 15, 2025 - 10:30 AM</p>
+                          </div>
+                          <div class="col-md-6">
+                            <p class="mb-1"><strong>Arrival:</strong></p>
+                            <p class="text-muted">March 15, 2025 - 2:45 PM</p>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-6">
+                            <p class="mb-1"><strong>Flight:</strong> SA 1234</p>
+                          </div>
+                          <div class="col-md-6">
+                            <p class="mb-1"><strong>Duration:</strong> 2h 15m</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <h4 class="mb-3">Passenger Information</h4>
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <p class="mb-1"><strong>Name:</strong> John Doe</p>
+                            <p class="mb-1"><strong>Email:</strong> john.doe@email.com</p>
+                          </div>
+                          <div class="col-md-6">
+                            <p class="mb-1"><strong>Phone:</strong> +216 12 345 678</p>
+                            <p class="mb-1"><strong>Seat:</strong> 12A</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-md-4">
+                    <h4 class="mb-3">Booking Summary</h4>
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="d-flex justify-content-between mb-2">
+                          <span>Booking Reference:</span>
+                          <span><strong>SA123456</strong></span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                          <span>Status:</span>
+                          <span class="badge bg-success">Confirmed</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                          <span>Total Paid:</span>
+                          <span><strong>450 DT</strong></span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                          <span>Booking Date:</span>
+                          <span>Feb 20, 2025</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="text-center mt-4">
+                <button type="button" class="btn btn-secondary me-3" onclick="prevStep(1)">
+                  <i class="ri-arrow-left-line"></i> Back
+                </button>
+                <button type="button" class="btn btn-primary" onclick="nextStep(3)">
+                  Continue <i class="ri-arrow-right-line"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3: Cancellation Policy -->
+        <div class="step-content" id="step3">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="text-center mb-4">Cancellation Policy & Fees</h2>
+              
+              <div class="booking__container">
+                <div class="alert alert-warning">
+                  <i class="ri-information-line"></i>
+                  <strong>Important:</strong> Please review the cancellation terms before proceeding.
+                </div>
+                
+                <div class="row">
+                  <div class="col-md-8">
+                    <h4 class="mb-3">Cancellation Terms</h4>
+                    
+                    <div class="card mb-3">
+                      <div class="card-body">
+                        <h5 class="card-title">
+                          <i class="ri-time-line text-primary"></i> Timing & Fees
+                        </h5>
+                        <ul class="list-unstyled">
+                          <li class="mb-2">
+                            <i class="ri-check-line text-success"></i>
+                            <strong>More than 24 hours before departure:</strong> 50 DT cancellation fee
+                          </li>
+                          <li class="mb-2">
+                            <i class="ri-close-line text-danger"></i>
+                            <strong>Less than 24 hours before departure:</strong> 150 DT cancellation fee
+                          </li>
+                          <li class="mb-2">
+                            <i class="ri-close-line text-danger"></i>
+                            <strong>No-show:</strong> No refund available
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    
+                    <div class="card mb-3">
+                      <div class="card-body">
+                        <h5 class="card-title">
+                          <i class="ri-money-dollar-circle-line text-primary"></i> Refund Information
+                        </h5>
+                        <ul class="list-unstyled">
+                          <li class="mb-2">
+                            <i class="ri-check-line text-success"></i>
+                            Refunds are processed within 7-10 business days
+                          </li>
+                          <li class="mb-2">
+                            <i class="ri-check-line text-success"></i>
+                            Refund will be credited to the original payment method
+                          </li>
+                          <li class="mb-2">
+                            <i class="ri-information-line text-info"></i>
+                            Taxes and fees are fully refundable
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">
+                          <i class="ri-file-text-line text-primary"></i> Additional Terms
+                        </h5>
+                        <ul class="list-unstyled">
+                          <li class="mb-2">
+                            <i class="ri-information-line text-info"></i>
+                            Special fare tickets may have different cancellation rules
+                          </li>
+                          <li class="mb-2">
+                            <i class="ri-information-line text-info"></i>
+                            Group bookings (10+ passengers) have separate policies
+                          </li>
+                          <li class="mb-2">
+                            <i class="ri-information-line text-info"></i>
+                            Travel insurance may cover additional cancellation scenarios
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-md-4">
+                    <h4 class="mb-3">Refund Calculation</h4>
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="d-flex justify-content-between mb-2">
+                          <span>Original Payment:</span>
+                          <span>450 DT</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                          <span>Cancellation Fee:</span>
+                          <span class="text-danger">-50 DT</span>
+                        </div>
+                        <hr>
+                        <div class="d-flex justify-content-between fw-bold">
+                          <span>Refund Amount:</span>
+                          <span class="text-success">400 DT</span>
+                        </div>
+                        
+                        <div class="mt-3 p-3 bg-light rounded">
+                          <small class="text-muted">
+                            <i class="ri-information-line"></i>
+                            Your refund will be processed to your original payment method within 7-10 business days.
+                          </small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="text-center mt-4">
+                <button type="button" class="btn btn-secondary me-3" onclick="prevStep(2)">
+                  <i class="ri-arrow-left-line"></i> Back
+                </button>
+                <button type="button" class="btn btn-primary" onclick="nextStep(4)">
+                  I Understand, Continue <i class="ri-arrow-right-line"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 4: Confirm Cancellation -->
+        <div class="step-content" id="step4">
+          <div class="row">
+            <div class="col-lg-6 mx-auto">
+              <h2 class="text-center mb-4">Confirm Cancellation</h2>
+              
+              <div class="booking__container">
+                <div class="alert alert-danger">
+                  <i class="ri-alert-line"></i>
+                  <strong>Final Step:</strong> This action cannot be undone. Please confirm you want to cancel this booking.
+                </div>
+                
+                <div class="card mb-4">
+                  <div class="card-body text-center">
+                    <h5>Booking SA123456</h5>
+                    <p class="mb-2">Tunis (TUN) → Paris (CDG)</p>
+                    <p class="mb-2">March 15, 2025 - 10:30 AM</p>
+                    <p class="mb-0">Passenger: John Doe</p>
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <label class="form-label">Reason for Cancellation (Optional)</label>
+                  <select class="form-control">
+                    <option value="">Select a reason</option>
+                    <option value="change-plans">Change of plans</option>
+                    <option value="medical">Medical reasons</option>
+                    <option value="work">Work commitments</option>
+                    <option value="family">Family emergency</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                
+                <div class="form-group">
+                  <label class="form-label">Additional Comments (Optional)</label>
+                  <textarea class="form-control" rows="3" placeholder="Any additional information..."></textarea>
+                </div>
+                
+                <div class="form-check mb-4">
+                  <input class="form-check-input" type="checkbox" id="confirmTerms" required>
+                  <label class="form-check-label" for="confirmTerms">
+                    I have read and agree to the cancellation terms and understand that a 50 DT cancellation fee will be deducted from my refund.
+                  </label>
+                </div>
+              </div>
+              
+              <div class="text-center mt-4">
+                <button type="button" class="btn btn-secondary me-3" onclick="prevStep(3)">
+                  <i class="ri-arrow-left-line"></i> Back
+                </button>
+                <button type="button" class="btn btn-danger btn-lg" onclick="confirmCancellation()">
+                  <i class="ri-close-circle-line"></i> Cancel Booking
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="pro-footer">
+      <div class="pro-footer__main">
+        <div class="pro-footer__grid">
+          <div class="pro-footer__brand">
+            <div class="pro-footer__logo">
+              <span>SayadiAirways</span>
+            </div>
+            <p>Your trusted airline partner since 2020. We connect Tunisia to the world with comfort, safety, and unmatched service excellence.</p>
+            <div class="pro-footer__social">
+              <a href="https://www.facebook.com/fedi1923"><i class="ri-facebook-fill"></i></a>
+              <a href="https://twitter.com/FediSayadi" aria-label="Twitter">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M22 5.92c-.64.28-1.32.47-2.04.56.73-.44 1.28-1.13 1.54-1.95-.68.4-1.44.68-2.25.83a3.6 3.6 0 0 0-6.13 3.28A10.2 10.2 0 0 1 3.16 4.6a3.6 3.6 0 0 0 1.12 4.8c-.58-.02-1.12-.18-1.6-.45v.05a3.6 3.6 0 0 0 2.88 3.53c-.27.07-.56.09-.86.03a3.6 3.6 0 0 0 3.36 2.5A7.23 7.23 0 0 1 2 18.58 10.19 10.19 0 0 0 7.37 20c8.84 0 13.67-7.32 13.67-13.66v-.62A9.6 9.6 0 0 0 22 5.92z"/>
+                </svg>
+              </a>
+              <a href="https://www.instagram.com/sayadi.fedi/"><i class="ri-instagram-line"></i></a>
+              <a href="https://www.linkedin.com/in/fedi-sayadi-ba705b287/"><i class="ri-linkedin-fill"></i></a>
+              <a href="https://www.youtube.com/@fedisayadi7627"><i class="ri-youtube-fill"></i></a>
+            </div>
+          </div>
+          
+          <div class="pro-footer__col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="Book-Complete.html"><i class="ri-plane-line"></i> Book a Flight</a></li>
+              <li><a href="CheckIn-Complete.html"><i class="ri-checkbox-circle-line"></i> Online Check-In</a></li>
+              <li><a href="FlightStatus.html"><i class="ri-time-line"></i> Flight Status</a></li>
+              <li><a href="Explore.html"><i class="ri-map-pin-line"></i> Destinations</a></li>
+              <li><a href="Experience.html"><i class="ri-star-line"></i> Travel Experience</a></li>
+            </ul>
+          </div>
+          
+          <div class="pro-footer__col">
+            <h4>Travel Services</h4>
+            <ul>
+              <li><a href="ExtraBaggage.html"><i class="ri-luggage-cart-line"></i> Extra Baggage</a></li>
+              <li><a href="CarRental-Complete.html"><i class="ri-car-line"></i> Car Rental</a></li>
+              <li><a href="HotelBooking-Complete.html"><i class="ri-hotel-line"></i> Hotel Booking</a></li>
+              <li><a href="TravelInsurance-Complete.html"><i class="ri-shield-check-line"></i> Travel Insurance</a></li>
+              <li><a href="ModifyBooking-Complete.html"><i class="ri-edit-line"></i> Manage Booking</a></li>
+            </ul>
+          </div>
+          
+          <div class="pro-footer__col">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="Contact.html"><i class="ri-customer-service-line"></i> Contact Us</a></li>
+              <li><a href="#"><i class="ri-question-line"></i> FAQs</a></li>
+              <li><a href="#"><i class="ri-file-text-line"></i> Terms & Conditions</a></li>
+              <li><a href="#"><i class="ri-shield-line"></i> Privacy Policy</a></li>
+              <li><a href="#"><i class="ri-feedback-line"></i> Feedback</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="pro-footer__bottom">
+        <div class="pro-footer__bottom-content">
+          <div class="pro-footer__copyright">
+            &copy; 2025 SayadiAirways. All rights reserved.
+          </div>
+          <div class="pro-footer__payments">
+            <span>We accept:</span>
+            <div class="pro-footer__payment-icons">
+              <i class="ri-visa-line"></i>
+              <i class="ri-mastercard-line"></i>
+              <i class="ri-paypal-line"></i>
+              <i class="ri-bank-card-line"></i>
+            </div>
+          </div>
+          <div class="pro-footer__legal">
+            <a href="#">Cookie Policy</a>
+            <a href="#">Accessibility</a>
+            <a href="#">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+    
+    <script>
+      let currentStep = 1;
+      
+      function nextStep(step) {
+        // Hide current step
+        document.getElementById(`step${currentStep}`).classList.remove('active');
+        document.querySelector(`.process-step:nth-child(${currentStep * 2 - 1}) .step-number`).classList.remove('active');
+        
+        // Show next step
+        currentStep = step;
+        document.getElementById(`step${currentStep}`).classList.add('active');
+        document.querySelector(`.process-step:nth-child(${currentStep * 2 - 1}) .step-number`).classList.add('active');
+        
+        // Update connectors
+        for (let i = 1; i < currentStep; i++) {
+          document.querySelector(`.step-connector:nth-child(${i * 2})`).classList.add('completed');
+        }
+        
+        // Scroll to top
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+      
+      function prevStep(step) {
+        nextStep(step);
+      }
+      
+      function confirmCancellation() {
+        const checkbox = document.getElementById('confirmTerms');
+        if (!checkbox.checked) {
+          alert('Please confirm that you agree to the cancellation terms.');
+          return;
+        }
+        
+        alert('Booking cancelled successfully! Your refund of 400 DT will be processed within 7-10 business days.');
+        window.location.href = 'Home.html';
+      }
+      
+      function confirmCancellation() {
+        const checkbox = document.getElementById('confirmCancellation');
+        
+        if (!checkbox.checked) {
+          alert('Please confirm that you understand the cancellation policy by checking the checkbox.');
+          return;
+        }
+        
+        // Simulate cancellation processing
+        const btn = event.target;
+        btn.innerHTML = '<i class="ri-loader-4-line"></i> Processing...';
+        btn.disabled = true;
+        
+        setTimeout(() => {
+          // Set cancellation date
+          document.getElementById('cancellationDate').textContent = new Date().toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit'
+          });
+          
+          // Show confirmation step
+          nextStep(5);
+          
+          btn.innerHTML = '<i class="ri-close-circle-line me-2"></i>Cancel My Booking';
+          btn.disabled = false;
+        }, 2000);
+      }
+    </script>
+  </body>
+</html>
